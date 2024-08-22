@@ -4,7 +4,7 @@ This repository contains the content for the {bank_name} openbanking developer p
 will primarily used by third party developers (TPP developers) to consume the openbanking APIs
 exposed by ozone  (for {bank_name}).
 
-This repository can be used to tailor the content presented to the third party developers including
+This repository can be used to tailor the contents presented to the third party developers including
 branding.
 ### How this repository is used ###
 
