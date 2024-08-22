@@ -1,10 +1,10 @@
 # README #
 
-This repository contains the content for the {bank_name} openbanking developer portal. This portal
+This repository contains the content for the Stripe openbanking developer portal. This portal
 will primarily used by third party developers (TPP developers) to consume the openbanking APIs
-exposed by ozone  (for {bank_name}).
+exposed by ozone  (for Stripe).
 
-This repository can be used to tailor the contents presented to the third party developers including
+This repository can be used to tailor the content presented to the third party developers including
 branding.
 ### How this repository is used ###
 
@@ -19,17 +19,4 @@ The following placeholders can be used for find/replace opperations:
 
 Find:     {contact@prod-email-domain.com}
 Replace:  contact@prod-email-domain.com
-
-Find:     {api.stripe.uk-hub-prod.ozoneapi.co.uk}
-Replace:  api.stripe.uk-hub-prod.ozoneapi.co.uk
-
-Find:     {sandbox_domain_name}
-Replace:  sandbox.stripe.uk-hub-prod.ozoneapi.co.uk
-
-Find:     {bank_name}
-Replace:  Stripe
-
-Find:     resource=dev-ui-portal
-Replace   branch-name
-
 ```

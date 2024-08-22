@@ -35,7 +35,7 @@ In Open Banking, a Competent Authority is a regulator who can authorise entities
 The Open Banking Directory is the canonical list of providers who are authorised to take part in the Open Banking ecosystem. The directory handles authentication between registered providers.
 
 Directory Sandbox
-The Open Banking Directory Sandbox provides a test instance of the real directory so that providers can test their implementations before going live. You’ll need to registered with the Open Banking Directory Sandbox in order to use the {bank_name} API sandbox.
+The Open Banking Directory Sandbox provides a test instance of the real directory so that providers can test their implementations before going live. You’ll need to registered with the Open Banking Directory Sandbox in order to use the Stripe API sandbox.
 
 ### EBA
 The European Banking Authority sets the technical standards for Open Banking.
