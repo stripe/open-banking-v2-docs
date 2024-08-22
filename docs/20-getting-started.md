@@ -9,7 +9,7 @@ The `aud` claim used in the outer JWT of a Dynamic Client Registration request i
 
 ## Production security profile
 
-As defined further in the {bank_name} Open Banking API Specification
+As defined further in the Stripe Open Banking API Specification
 
 - ID Token Signing Algorithm: `PS256`
 - Response Types: `code id_token`
@@ -18,7 +18,7 @@ As defined further in the {bank_name} Open Banking API Specification
 - Token Endpoint Auth Methods: `private_key_jwt`, `tls_client_auth`
 
 > For private_key_jwt - the `aud` claim is the url of the token endpoint as specified in OIDC client authentication
-> The request object used in OIDC flows the aud claim is the issuer url from the {bank_name} ASPSP .wellknown endpoint (linked below).
+> The request object used in OIDC flows the aud claim is the issuer url from the Stripe ASPSP .wellknown endpoint (linked below).
 
 > Note: Our Sandbox API also offers less strict profiles to assist with integration testing. See below for more details.
 

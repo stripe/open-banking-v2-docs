@@ -6,25 +6,15 @@ The following placeholders can be used for find/replace opperations:
 
 Find:     {contact@prod-email-domain.com}
 Replace:  contact@prod-email-domain.com
-
-Find:     {api.stripe.uk-hub-prod.ozoneapi.co.uk}
-Replace:  https://www.api.stripe.uk-hub-prod.ozoneapi.co.uk
-
-Find:     {sandbox_domain_name}
-Replace:  https://www.sandbox.stripe.uk-hub-prod.ozoneapi.co.uk
-
-Find:     {bank_name}
-Replace:  Stripe
-
 ```
 
 ## Open Banking
 
-The {bank_name} Open Banking API is based on the Open Banking Standard which allows regulated Third Party Providers (TPPs) to access Account Information Services (AIS), Payment Initiation Services (PIS) and funds confirmation requests for member accounts. Access to these services on behalf of members is controlled by strong customer authentication within {bank_name} apps as part of OpenID Connect authorisation flows.
+The Stripe Open Banking API is based on the Open Banking Standard which allows regulated Third Party Providers (TPPs) to access Account Information Services (AIS) and Payment Initiation Services (PIS) for member accounts. Access to these services on behalf of members is controlled by strong customer authentication within the Stripe Dashboard as part of OpenID Connect authorisation flows.
 
-We currently support app->app and mobile-web->app authentication flows.
+We currently support app->app authentication flows.
 
-{bank_name} is an FCA registered Account Servicing Payment Service Provider (ASPSP) who provides access to these services via the Open Banking standard.
+Stripe is an FCA registered Account Servicing Payment Service Provider (ASPSP) who provides access to these services via the Open Banking standard.
 
 You can find out more about Open Banking here: [What is Open Banking](https://www.openbanking.org.uk/customers/what-is-open-banking/)
 
@@ -37,7 +27,6 @@ Please see the following specifications we have aligned with:
 - Open Banking API Specification: Based on Open Banking Read/Write API Specification v3.1.2, this specification describes the resources that are available on our service:
   - [Accounts & Transaction Information API](../swagger/account-info-openapi.yaml)
   - [Payments Initiation Services API](../swagger/payment-initiation-openapi.yaml)
-  - [Card Based Payment Instrument Issuer (CBPII) API](../swagger/confirmation-funds-openapi.yaml)
 
 ## Getting started
 

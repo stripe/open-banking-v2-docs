@@ -9,13 +9,13 @@ We provide a regulatory sandbox that fully reflects our production APIs.
 ### Regulatory Sandbox
 
 - Authorisation Server 1: Provides both strict and permissive client profiles in headless and non headless options.
-- OIDC Well Known endpoint: https://auth1.{sandbox_domain_name}/.well-known/openid-configuration
-- baseUrl: https://auth1.{sandbox_domain_name}/
+- OIDC Well Known endpoint: https://auth1.sandbox.stripeopenbanking.com/.well-known/openid-configuration
+- baseUrl: https://auth1.sandbox.stripeopenbanking.com/
 
 ### Step by Step guide to connect to sandbox
 
 #### Step 1: Pre-Requisites for TPP
-Ensure that the following pre-requisites are met before onboarding onto {bank_name}.
+Ensure that the following pre-requisites are met before onboarding onto Stripe.
 The TPP has registered on the Directory Sandbox - https://directory.openbanking.org.uk/s/login/
 The TPP has at least one software statement created on the Directory Sandbox environment
 The TPP has at least one transport certificate created for each of its software statements.
@@ -109,7 +109,7 @@ make_registration_jwt(SOFTWARE_STATEMENT_ID, KID, SOFTWARE_STATEMENT)
 ```
 headers = {'Content-Type': 'application/jwt'}
 client = ('./transport.pem', './transports.key')
-response = requests.post("https://ob-api1.{sandbox_domain_name}/dynamic-client-registration/v3.1/register",
+response = requests.post("https://ob-api1.sandbox.stripeopenbanking.com/dynamic-client-registration/v3.1/register",
                                 registration_request,
                                 headers=headers,
                                 verify=False,
@@ -122,10 +122,10 @@ You should now have successfully onboarded your TPP with the ASPSP and received 
 
 2.3 Environment File download
 
-Once a TPP successfully registers to {bank_name}, they can download the environment file for their client via an {bank_name} helper api
+Once a TPP successfully registers to Stripe, they can download the environment file for their client via an Stripe helper api
 
 ```
-Endpoint: https://ob-api1.{sandbox_domain_name}/ozone/v1.0/postman/environment
+Endpoint: https://ob-api1.sandbox.stripeopenbanking.com/ozone/v1.0/postman/environment
 
 Headers: Authorization: Basic <token>
 The token is the base64 encoded string of clientId:clientsecret
@@ -143,8 +143,8 @@ On successful response the TPP can then save the environment file on to their lo
 
 3.3) Add Client Certificates
 Add the following ASPSP end points into Postman;
-https://rs1.{sandbox_domain_name}
-https://auth1.{sandbox_domain_name}/token
+https://rs1.sandbox.stripeopenbanking.com
+https://auth1.sandbox.stripeopenbanking.com/token
 
 The CRT should be set to the transport certificate downloaded from the open banking directory. The Key value should be set to the private key for the transport certificate.
 
@@ -185,7 +185,7 @@ Select accounts
 
 ![](/assets/images/consent3.png)
 
-Once the PSU consent is successful, {bank_name} will redirect back to the redirect URI. Copy the Authcode from the URL
+Once the PSU consent is successful, Stripe will redirect back to the redirect URI. Copy the Authcode from the URL
 
 ![](/assets/images/consent4.png)
 

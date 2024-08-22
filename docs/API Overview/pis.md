@@ -1,7 +1,7 @@
 # PISP API Overview
 
 ## Base URL
-The base URL for all PIS APIs is: `https://rs1.api.stripe.uk-hub-prod.ozoneapi.co.uk/open-banking/v3.1/pisp/**`
+The base URL for all PIS APIs is: `https://rs1.api.stripeopenbanking.com/open-banking/v3.1/pisp/**`
 
 ## Supported Payment Types
 The Stripe API currently only supports:
@@ -40,15 +40,18 @@ The following apply to all domestic payment consents:
 
 The PISP may also opt to populate reference field on behalf of the PSU
 
-### `CreditorAccount`
-<!-- theme: info -->
-> ### Note
->
-> Domestic-payment-consents will only be authorised if the `CreditorAccount` details are sent received
-> If a consent contains recipient info that does not meet this criteria then error will be returned to the front end, the consent will remain in status `AwaitingAuthorisation` and the PSU will not be redirected.
+### `CreditorAccount` and `DebtorAccount` requirements
 
-### `Account.SchemeName`
-The only supported `Account.SchemeName` is `UK.OBIE.SortCodeAccountNumber` for both `DebtorAccount` and `CreditorAccount`. Any other enum provided will return error.
+`CreditorAccount` supports either `UK.OBIE.SortCodeAccountNumber` or `UK.OBIE.Wallet` for the `Account.SchemeName` parameter. Providing any other value will return an error.
+- `UK.OBIE.Wallet`
+  - Identification: Must be the recipient account ID (e.g. `acct_test_123`)
+  - SecondaryIdentification: Optional if the recipient has a default destination, otherwise the destination ID (e.g. `usba_test_123`)
+-  `UK.OBIE.SortCodeAccountNumber`
+  - Identification: Must be the concatenated sort code and account number, totaling 14 digits
+  - SecondaryIdentification: Must contain the recipient's email address
+  - Name: Must be the full name (first & last) of the recipient
+
+The only supported `Account.SchemeName` is `UK.OBIE.Wallet` for `DebtorAccount`. When `DebtorAccount` is passed, the `Identification` must match the Financial Account ID belonging to the PSU.
 
 ## Payment dates
 Payments can be made on all days including Saturdays, Sundays and Bank Holidays

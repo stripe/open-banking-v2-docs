@@ -12,12 +12,12 @@ We are a registered Account Servicing Payment Service Provider (ASPSP) who provi
 
 ## Contents
 
-- [Introduction](/perry/developer/documentation?resource=dev-ui-portal&document=docs/10-index.md)
-- [Getting Started](/perry/developer/documentation?resource=dev-ui-portal&document=docs/20-getting-started.md)
-- [Production Environment](/perry/developer/documentation?resource=dev-ui-portal&document=docs/30-production.md)
-- [Sandbox Environment](/perry/developer/documentation?resource=dev-ui-portal&document=docs/40-sandbox.md)
-- [Planned Updates](/perry/developer/documentation?resource=dev-ui-portal&document=docs/50-planned-updates.md)
-- [AISP API Overview](/perry/developer/documentation?resource=dev-ui-portal&document=docs/API%20Overview/ais.md)
-- [Account and Transaction API Specification](/perry/developer/documentation?resource=dev-ui-portal&document=swagger/account-info-openapi.yaml)
-- [Payment Initiation Services API Specification](/perry/developer/documentation?resource=dev-ui-portal&document=swagger/payment-initiation-openapi.yaml)
-- [Card Based Payment Instrument Issuer API Specification](/perry/developer/documentation?resource=dev-ui-portal&document=swagger/confirmation-funds-openapi.yaml)
+- [Introduction](/perry/developer/documentation?resource=ukhub-stripe-portal&document=docs/10-index.md)
+- [Getting Started](/perry/developer/documentation?resource=ukhub-stripe-portal&document=docs/20-getting-started.md)
+- [Production Environment](/perry/developer/documentation?resource=ukhub-stripe-portal&document=docs/30-production.md)
+- [Sandbox Environment](/perry/developer/documentation?resource=ukhub-stripe-portal&document=docs/40-sandbox.md)
+- [Planned Updates](/perry/developer/documentation?resource=ukhub-stripe-portal&document=docs/50-planned-updates.md)
+- [AISP API Overview](/perry/developer/documentation?resource=ukhub-stripe-portal&document=docs/API%20Overview/ais.md)
+- [PISP API Overview](/perry/developer/documentation?resource=ukhub-stripe-portal&document=docs/API%20Overview/pis.md)
+- [Account and Transaction API Specification](/perry/developer/documentation?resource=ukhub-stripe-portal&document=swagger/account-info-openapi.yaml)
+- [Payment Initiation Services API Specification](/perry/developer/documentation?resource=ukhub-stripe-portal&document=swagger/payment-initiation-openapi.yaml)
