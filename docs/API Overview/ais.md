@@ -22,7 +22,4 @@ Balances shown in this endpoint provide the `InterimAvailable` value.
 ## Transactions
 [Transactions API](/perry/developer/documentation?resource=ukhub-stripe-portal&document=swagger/account-info-openapi.yaml#operations-tag-Transactions)
 
-Pagination is supported on GET /transactions end point with a page size of 100 transactions.
-
-Please note GET /accounts/{AccountId}/transactions end point is not supported
-
+Transactions are categorized using the `ProprietaryBankTransactionCode` field. A human readable description will be provided in the `TransactionInformation` field when applicable.

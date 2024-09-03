@@ -12,11 +12,3 @@ This repository is pulled by ozone and used to refresh the content being display
 The developer portal is maintained by ozone, this repository provides the content to be displayed on the portal.
 
 If the API spec is changed, it is expected to update the swagger definitions checked into this repository.
-
-```
-Content placeholders
-The following placeholders can be used for find/replace opperations:
-
-Find:     {contact@prod-email-domain.com}
-Replace:  contact@prod-email-domain.com
-```
