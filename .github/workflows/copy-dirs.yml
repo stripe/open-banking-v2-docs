@@ -44,6 +44,10 @@ jobs:
       run: |
         git push origin v1-uk-docs-release
 
+    - name: Clean Up Temp Directory
+      run: |
+        rm -rf temp-v1-uk-docs
+
   copy-v1-eu-docs:
     runs-on: ubuntu-latest
 
@@ -77,3 +81,7 @@ jobs:
     - name: Push to v1-eu-docs-release Branch
       run: |
         git push origin v1-eu-docs-release
+        
+    - name: Clean Up Temp Directory
+      run: |
+        rm -rf temp-v1-eu-docs
