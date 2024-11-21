@@ -51,6 +51,9 @@ jobs:
   copy-v1-eu-docs:
     runs-on: ubuntu-latest
 
+    permissions: 
+      contents: write
+
     steps:
     - name: Checkout Source Branch
       uses: actions/checkout@v3
