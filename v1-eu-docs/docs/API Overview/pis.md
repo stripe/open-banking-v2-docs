@@ -8,7 +8,6 @@ The Stripe API currently only supports:
 - Domestic Payments
 
 The Stripe API __does not__ support:
-- International payments
 - File & Bulk payments
 - `payment-details` end-points
 - Domestic Scheduled Payments
@@ -40,19 +39,12 @@ The following apply to all domestic payment consents:
 
 The PISP may also opt to populate reference field on behalf of the PSU
 
-### `CreditorAccount` and `DebtorAccount` requirements
+### `CreditorAccount` requirements
 
-`CreditorAccount` supports either `UK.OBIE.SortCodeAccountNumber` or `UK.OBIE.Wallet` for the `Account.SchemeName` parameter. Providing any other value will return an error.
+`CreditorAccount` supports `UK.OBIE.Wallet` for the `Account.SchemeName` parameter. Providing any other value will return an error.
 - `UK.OBIE.Wallet`
-  - Identification: Must be the recipient account ID (e.g. `acct_test_123`)
-  - SecondaryIdentification: Optional if the recipient has a default destination, otherwise the destination ID (e.g. `usba_test_123`)
--  `UK.OBIE.SortCodeAccountNumber`
-  - Identification: Must be the concatenated sort code and account number, totaling 14 digits
-  - SecondaryIdentification: Must contain the recipient's email address
-  - Name: Must be the full name (first & last) of the recipient
-
-The only supported `Account.SchemeName` is `UK.OBIE.Wallet` for `DebtorAccount`. When `DebtorAccount` is passed, the `Identification` must match the Financial Account ID belonging to the PSU.
+  - `CreditorAccount.Identification`: Must be the recipient account ID (e.g. `acct_test_123`)
+  - `SupplementaryData.CreditorAccount.Destination`: Optional if the payout recipient has a default destination, otherwise the destination ID (e.g `ba_test_1MtIhL2eZvKYlo2CAElKwKu2`)
 
 ## Payment dates
 Payments can be made on all days including Saturdays, Sundays and Bank Holidays
-

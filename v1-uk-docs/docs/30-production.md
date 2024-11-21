@@ -13,6 +13,3 @@ Our production authorisation server uses the strict profile defined above and te
 - Account Information Services API: https://rs1.api-v1-uk.stripeopenbanking.com/open-banking/v3.1/aisp/**
 
 - Payment Initiation Services API: https://rs1.api-v1-uk.stripeopenbanking.com/open-banking/v3.1/pisp/**
-
-## Test accounts
-If you require test accounts please contact mailto:{contact@prod-email-domain.com}
