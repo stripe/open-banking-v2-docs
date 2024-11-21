@@ -15,14 +15,19 @@ jobs:
       with:
         ref: master
 
+    - name: Copy v1-uk-docs to Temp Directory
+      run: |
+        mkdir -p temp-v1-uk-docs
+        cp -r v1-uk-docs/* temp-v1-uk-docs/
+
     - name: Prepare v1-uk-docs-release Branch
       run: |
         git fetch origin +refs/heads/v1-uk-docs-release:refs/remotes/origin/v1-uk-docs-release
         git checkout v1-uk-docs-release || git checkout --orphan v1-uk-docs-release
 
-    - name: Copy v1-uk-docs dir
+    - name: Copy from Temp Directory to v1-uk-docs-release
       run: |
-        cp -r v1-uk-docs/* .
+        cp -r temp-v1-uk-docs/* .
         git add .
         git commit -m "Copy v1-uk-docs to root of v1-uk-docs-release"
 
@@ -39,14 +44,19 @@ jobs:
       with:
         ref: master
 
+    - name: Copy v1-eu-docs to Temp Directory
+      run: |
+        mkdir -p temp-v1-eu-docs
+        cp -r v1-eu-docs/* temp-v1-eu-docs/
+
     - name: Prepare v1-eu-docs-release Branch
       run: |
         git fetch origin +refs/heads/v1-eu-docs-release:refs/remotes/origin/v1-eu-docs-release
         git checkout v1-eu-docs-release || git checkout --orphan v1-eu-docs-release
 
-    - name: Copy v1-eu-docs dir
+    - name: Copy from Temp Directory to v1-eu-docs-release
       run: |
-        cp -r v1-eu-docs/* .
+        cp -r temp-v1-eu-docs/* .
         git add .
         git commit -m "Copy v1-eu-docs to root of v1-eu-docs-release"
 
