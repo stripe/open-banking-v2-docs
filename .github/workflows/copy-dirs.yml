@@ -10,6 +10,9 @@ jobs:
   copy-v1-uk-docs:
     runs-on: ubuntu-latest
 
+    permissions: 
+      contents: write
+
     steps:
     - name: Checkout Source Branch
       uses: actions/checkout@v3
