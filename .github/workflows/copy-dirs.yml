@@ -38,7 +38,7 @@ jobs:
       run: |
         cp -r temp-v1-uk-docs/* .
         git add .
-        git commit -m "Copy v1-uk-docs to root of v1-uk-docs-release"
+        git commit -m "Copy v1-uk-docs to root of v1-uk-docs-release. Sync from ${{ github.sha }}" || echo "No changes to commit"
 
     - name: Push to v1-uk-docs-release
       run: |
@@ -79,7 +79,7 @@ jobs:
       run: |
         cp -r temp-v1-eu-docs/* .
         git add .
-        git commit -m "Copy v1-eu-docs to root of v1-eu-docs-release"
+        git commit -m "Copy v1-eu-docs to root of v1-eu-docs-release. Sync from ${{ github.sha }}" || echo "No changes to commit"
 
     - name: Push to v1-eu-docs-release Branch
       run: |
