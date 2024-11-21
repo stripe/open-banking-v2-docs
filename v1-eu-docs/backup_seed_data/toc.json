@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "type": "item",
+      "title": "Introduction",
+      "uri": "docs/10-index.md"
+    },
+    {
+      "type": "item",
+      "title": "Getting started",
+      "uri": "docs/20-getting-started.md"
+    },
+    {
+      "type": "item",
+      "title": "Production",
+      "uri": "docs/30-production.md"
+    },
+    {
+      "type": "item",
+      "title": "Sandbox",
+      "uri": "docs/40-sandbox.md"
+    },
+    {
+      "type": "item",
+      "title": "Planned Updates",
+      "uri": "docs/50-planned-updates.md"
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "item",
+      "title": "AISP API Overview",
+      "uri": "docs/API Overview/ais.md"
+    },
+    {
+      "type": "item",
+      "title": "PISP API Overview",
+      "uri": "docs/API Overview/pis.md"
+    },
+    {
+      "type": "item",
+      "title": "CBPII API Overview",
+      "uri": "docs/API Overview/cbpii.md"
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "item",
+      "title": "Account and Transaction API Specification",
+      "uri": "swagger/account-info-openapi.yaml"
+    },
+    {
+      "type": "item",
+      "title": "Payment Initiation Services API Specification",
+      "uri": "swagger/payment-initiation-openapi.yaml"
+    },
+    {
+      "type": "item",
+      "title": "Card Based Payment Instrument Issuer API Specification",
+      "uri": "swagger/confirmation-funds-openapi.yaml"
+    },
+    {
+      "type": "divider"
+    },
+
+    {
+      "type": "group",
+      "title": "Help",
+      "items": [
+        {
+          "type": "item",
+          "title": "Overview",
+          "uri": "docs/Help/10-overview.md"
+        },
+        {
+          "type": "item",
+          "title": "Resources",
+          "uri": "docs/Help/30-resources.md"
+        },
+        {
+          "type": "item",
+          "title": "FAQs",
+          "uri": "docs/Help/40-faqs.md"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "title": "Contact Us",
+      "uri": "docs/60-contact-us.md"
+    }
+  ]
+}
