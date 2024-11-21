@@ -1,18 +1,10 @@
 # Introduction
 
-```
-Content placeholders
-The following placeholders can be used for find/replace opperations:
-
-Find:     {contact@prod-email-domain.com}
-Replace:  contact@prod-email-domain.com
-```
-
 ## Open Banking
 
 The Stripe Open Banking API is based on the Open Banking Standard which allows regulated Third Party Providers (TPPs) to access Account Information Services (AIS) and Payment Initiation Services (PIS) for member accounts. Access to these services on behalf of members is controlled by strong customer authentication within the Stripe Dashboard as part of OpenID Connect authorisation flows.
 
-We currently support app->app authentication flows.
+We currently support website->website authentication flows.
 
 Stripe is an FCA registered Account Servicing Payment Service Provider (ASPSP) who provides access to these services via the Open Banking standard.
 
@@ -37,5 +29,3 @@ Our Sandbox fully reflects our production environment and provides an easy route
 To access the production environment, you must be a TPP authorised by the FCA or passported into the UK. Instructions for accessing our Production APIs are [here](./docs/30-production.md).
 
 See our [Getting Started](./docs/20-getting-started.md) page for instructions on accessing our sandbox and production APIs
-
-If you require test accounts please contact mailto:{contact@prod-email-domain.com}

@@ -47,9 +47,9 @@ The PISP may also opt to populate reference field on behalf of the PSU
   - `CreditorAccount.Identification`: Must be the recipient account ID (e.g. `acct_test_123`)
   - `SupplementaryData.CreditorAccount.Destination`: Optional if the recipient has a default destination, otherwise the destination ID (e.g. `usba_test_123`)
 -  `UK.OBIE.SortCodeAccountNumber`
-  - `CreditorAccount.Identification`: Must be the concatenated sort code and account number, totaling 14 digits
-  - `CreditorAccount.Name`: Must be the full name (first & last) of the recipient
-  - `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
+    - `CreditorAccount.Identification`: Must be the concatenated sort code and account number, totaling 14 digits
+    - `CreditorAccount.Name`: Must be the full name (first & last) of the recipient
+    - `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
 
 ## Payment dates
 Payments can be made on all days including Saturdays, Sundays and Bank Holidays

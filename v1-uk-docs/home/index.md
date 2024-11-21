@@ -4,7 +4,7 @@
 
 The Stripe, Inc. Open Banking API is based on the Open Banking Standard which allows regulated Third Party Providers (TPPs) to access Account Information Services (AIS), Payment Initiation Services (PIS) and funds confirmation requests for member accounts.
 
-This Ozone Sandbox has been created by [Ozone](https://ozoneapi.com) to enable developers to build and test open banking enabled applications which require access to Variable Recurring Payments (VRPse).
+This Ozone Sandbox has been created by [Ozone](https://ozoneapi.com) to enable developers to build and test open banking enabled applications.
 
 Access to these services on behalf of members is controlled by strong customer authentication within Stripe, Inc. apps as part of OpenID Connect authorisation flows.
 
