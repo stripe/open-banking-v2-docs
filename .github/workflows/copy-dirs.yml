@@ -25,6 +25,11 @@ jobs:
         git fetch origin +refs/heads/v1-uk-docs-release:refs/remotes/origin/v1-uk-docs-release
         git checkout v1-uk-docs-release || git checkout --orphan v1-uk-docs-release
 
+    - name: Configure Git
+      run: |
+        git config user.name "kabhi-stripe"
+        git config user.email "kabhi@stripe.com"
+
     - name: Copy from Temp Directory to v1-uk-docs-release
       run: |
         cp -r temp-v1-uk-docs/* .
@@ -53,6 +58,11 @@ jobs:
       run: |
         git fetch origin +refs/heads/v1-eu-docs-release:refs/remotes/origin/v1-eu-docs-release
         git checkout v1-eu-docs-release || git checkout --orphan v1-eu-docs-release
+
+    - name: Configure Git
+      run: |
+        git config user.name "kabhi-stripe"
+        git config user.email "kabhi@stripe.com"
 
     - name: Copy from Temp Directory to v1-eu-docs-release
       run: |
