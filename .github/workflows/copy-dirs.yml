@@ -42,7 +42,7 @@ jobs:
 
     - name: Push to v1-uk-docs-release
       run: |
-        git push origin v1-uk-docs-release
+        git push --force origin v1-uk-docs-release
 
     - name: Clean Up Temp Directory
       run: |
@@ -80,7 +80,7 @@ jobs:
 
     - name: Push to v1-eu-docs-release Branch
       run: |
-        git push origin v1-eu-docs-release
+        git push --force origin v1-eu-docs-release
         
     - name: Clean Up Temp Directory
       run: |
