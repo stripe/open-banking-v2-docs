@@ -6,9 +6,9 @@ The base URL for all PIS APIs is: `https://rs1.api.stripeopenbanking.com/open-ba
 ## Supported Payment Types
 The Stripe API currently only supports:
 - Domestic Payments
+- International payments
 
 The Stripe API __does not__ support:
-- International payments
 - File & Bulk payments
 - `payment-details` end-points
 - Domestic Scheduled Payments
@@ -42,7 +42,7 @@ The PISP may also opt to populate reference field on behalf of the PSU
 
 ### `CreditorAccount` requirements
 
-`CreditorAccount` supports either `UK.OBIE.SortCodeAccountNumber` or `UK.OBIE.Wallet` for the `Account.SchemeName` parameter. Providing any other value will return an error.
+`CreditorAccount` supports either `UK.OBIE.SortCodeAccountNumber` or `UK.OBIE.Wallet` or `UK.OBIE.IBAN` (only for international payments to French recipients) for the `Account.SchemeName` parameter. Providing any other value will return an error.
 - `UK.OBIE.Wallet`
   - `CreditorAccount.Identification`: Must be the recipient account ID (e.g. `acct_test_123`)
   - `SupplementaryData.CreditorAccount.Destination`: Optional if the recipient has a default destination, otherwise the destination ID (e.g. `usba_test_123`)
@@ -50,6 +50,19 @@ The PISP may also opt to populate reference field on behalf of the PSU
     - `CreditorAccount.Identification`: Must be the concatenated sort code and account number, totaling 14 digits
     - `CreditorAccount.Name`: Must be the full name (first & last) of the recipient
     - `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
+
+### `SupplementaryData` requirements
+Stripe's Open Banking API has requires you to send additional data in the SupplementaryData field to ensure a successful payment:
+- `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
+- `SupplementaryData.CreditorAccount.EntityType`: Must be either `individual` or `company` depending on the type of the recipient
+
+**Required** if `SupplementaryData.CreditorAccount.EntityType` is `individual`:
+-  `SupplementaryData.CreditorAccount.Individual.DateOfBirth`: The date of birth of the recipient in "YYYY-MM-DD" format
+
+**Required** if `SupplementaryData.CreditorAccount.EntityType` is `company`:
+-  `SupplementaryData.CreditorAccount.BusinessDetails.RegisteredName`: The registered name of the company
+
+
 
 ## Payment dates
 Payments can be made on all days including Saturdays, Sundays and Bank Holidays
