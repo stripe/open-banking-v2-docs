@@ -1,14 +1,10 @@
-
 # PISP API Overview
 
 ## Base URL
-
 The base URL for all PIS APIs is: `https://rs1.api.stripeopenbanking.com/open-banking/v3.1/pisp/**`
 
 ## Supported Payment Types
-
 The Stripe API currently only supports:
-
 - Domestic Payments
 - International Payments
 
@@ -29,9 +25,7 @@ The payment request from TPP must have the creditor information.
 - Stripe suggest PISP notify the PSU that the same limits apply as in their Stripe app. It is possible from time to time that the payment consent is authorised, but the payment initiation fails due to account limits.
 
 ### `RemittanceInformation/Reference`
-
 `RemittanceInformation/Reference` is a mandatory field and must adhere to the following:
-
 - Valid characters:
   - A-Z
   - a-z
@@ -110,5 +104,4 @@ Apart from `SupplementaryData` requirements mentioned above, Stripe requires add
 |France |If `SupplementaryData.CreditorAccount.EntityType` is `individual`, send `SupplementaryData.CreditorAccount.Individual.DateOfBirth`: The date of birth of the recipient in "YYYY-MM-DD" format |
 
 ## Payment dates
-
 Payments can be made on all days including Saturdays, Sundays and Bank Holidays
