@@ -39,7 +39,7 @@ The payment request from TPP must have the creditor information.
 The PISP may also opt to populate reference field on behalf of the PSU
 
 ### `SupplementaryData` requirements
-Stripe's Open Banking API has requires you to send additional data in the SupplementaryData field to ensure a successful payment:
+Stripe's Open Banking API requires you to send additional data in the SupplementaryData field to ensure a successful payment:
 - `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
 - `SupplementaryData.CreditorAccount.EntityType`: Must be either `individual` or `company` depending on the type of the recipient
 
