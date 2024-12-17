@@ -10,12 +10,12 @@ The base URL for all PIS APIs is: `https://rs1.api.stripeopenbanking.com/open-ba
 The Stripe API currently only supports:
 
 - Domestic Payments
-- International payments
+- International Payments
 
 The Stripe API __does not__ support:
 
 - File & Bulk payments
--  `payment-details` end-points
+- `payment-details` end-points
 - Domestic Scheduled Payments
 - Domestic Standing Orders
 
