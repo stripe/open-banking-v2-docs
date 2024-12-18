@@ -59,19 +59,24 @@ This is not required if you are using the `UK.OBIE.Wallet` scheme. Stripe's Open
 -  `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
 -  `SupplementaryData.CreditorAccount.EntityType`: Must be either `individual` or `company` depending on the type of the recipient
 
-### Note on sending a domestic payment from a different currency
-
-If you choose to send a domestic payment from a supported currency on your Financial Account other than `GBP`, please use the international payments API instead and enter the `DestinationCountryCode` as `GB`. You may then specify the `CurrencyOfTransfer` as mentioned below. You may use the `UK.OBIE.SortCodeAccountNumber` scheme for the CreditorAccount. Note that the payment will still land in GBP in the user's bank account.
-
 ## The following apply to all international payment consents:
 
 ### `CreditorAccount` requirements
 
-`CreditorAccount` supports only `UK.OBIE.IBAN` for the `Account.SchemeName` parameter. Providing any other value will return an error.
+`CreditorAccount` supports only `UK.OBIE.IBAN` and `UK.OBIE.SortCodeAccountNumber` (see special case below) for the `Account.SchemeName` parameter. Providing any other value will return an error.
 
--  `CreditorAccount.Identification`: Must be the IBAN of the recipient
--  `CreditorAccount.Name`: Must be the full name (first & last) of the recipient or the name of the business
- 
+-  `UK.OBIE.Wallet`
+   -  `CreditorAccount.Identification`: Must be the IBAN of the recipient
+   -  `CreditorAccount.Name`: Must be the full name (first & last) of the recipient or the name of the business
+-  `UK.OBIE.SortCodeAccountNumber`
+   -  `CreditorAccount.Identification`: Must be the concatenated sort code and account number, totaling 14 digits
+   -  `CreditorAccount.Name`: Must be the full name (first & last) of the recipient or the name of the business
+   -  `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
+
+### Note on sending a domestic payment from a different currency
+
+If you choose to send a domestic payment from a supported currency on your Financial Account other than `GBP`, please use the international payments API instead and enter the `DestinationCountryCode` as `GB`. You may then specify the `CurrencyOfTransfer` as mentioned below. You may use the `UK.OBIE.SortCodeAccountNumber` scheme for the CreditorAccount. Note that the payment will still land in GBP in the user's bank account.
+
 ### `CurrencyOfTransfer` requirements
 
 `CurrencyOfTransfer` should always be a supported currency on the user's Stripe Financial Account. This is the currency in which Stripe will debit the user's balance. Users must hold money in that currency at Stripe to be able to send a payment. You may use the AIS APIs to list the user's balances.
