@@ -65,7 +65,7 @@ This is not required if you are using the `UK.OBIE.Wallet` scheme. Stripe's Open
 
 `CreditorAccount` supports only `UK.OBIE.IBAN` and `UK.OBIE.SortCodeAccountNumber` (see special case below) for the `Account.SchemeName` parameter. Providing any other value will return an error.
 
--  `UK.OBIE.Wallet`
+-  `UK.OBIE.IBAN`
    -  `CreditorAccount.Identification`: Must be the IBAN of the recipient
    -  `CreditorAccount.Name`: Must be the full name (first & last) of the recipient or the name of the business
 -  `UK.OBIE.SortCodeAccountNumber`
