@@ -42,48 +42,33 @@ The PISP may also opt to populate reference field on behalf of the PSU
 
 ### `CreditorAccount` requirements
 
-`CreditorAccount` supports either `UK.OBIE.SortCodeAccountNumber` or `UK.OBIE.Wallet`  for the `Account.SchemeName` parameter. Providing any other value will return an error.
+`CreditorAccount.SchemeName` supports either `UK.OBIE.SortCodeAccountNumber` or `UK.OBIE.Wallet`. Providing any other value will return an error.
 
 -  `UK.OBIE.Wallet`
-   -  `CreditorAccount.Identification`: Must be the recipient account ID (e.g. `acct_test_123`)
-   -  `SupplementaryData.CreditorAccount.Destination`: Optional if the recipient has a default destination, otherwise the destination ID (e.g. `usba_test_123`)
+   -  `CreditorAccount.Identification`: Must be the Stripe recipient account ID (e.g. `acct_test_123`)
+   -  `SupplementaryData.CreditorAccount.Destination`: Optional if the recipient has a default outbound destination, otherwise the destination ID (e.g. `gbba_test_123`)
 -  `UK.OBIE.SortCodeAccountNumber`
    -  `CreditorAccount.Identification`: Must be the concatenated sort code and account number, totaling 14 digits
-   -  `CreditorAccount.Name`: Must be the full name (first & last) of the recipient or the name of the business
-   -  `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
-
-### `SupplementaryData` requirements
-
-This is not required if you are using the `UK.OBIE.Wallet` scheme. Stripe's Open Banking API requires you to send additional data in the SupplementaryData field to ensure a successful payment:
-
--  `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
--  `SupplementaryData.CreditorAccount.EntityType`: Must be either `individual` or `company` depending on the type of the recipient
 
 ## The following apply to all international payment consents:
 
 ### `CreditorAccount` requirements
 
-`CreditorAccount` supports only `UK.OBIE.IBAN` and `UK.OBIE.SortCodeAccountNumber` (see special case below) for the `Account.SchemeName` parameter. Providing any other value will return an error.
+`CreditorAccount.SchemeName` supports `UK.OBIE.IBAN`, `UK.OBIE.BBAN` and `UK.OBIE.SortCodeAccountNumber` (see special case mentioned below). Providing any other value will return an error.
 
--  `UK.OBIE.IBAN`
-   -  `CreditorAccount.Identification`: Must be the IBAN of the recipient
-   -  `CreditorAccount.Name`: Must be the full name (first & last) of the recipient or the name of the business
--  `UK.OBIE.SortCodeAccountNumber`
-   -  `CreditorAccount.Identification`: Must be the concatenated sort code and account number, totaling 14 digits
-   -  `CreditorAccount.Name`: Must be the full name (first & last) of the recipient or the name of the business
-   -  `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
+Please ensure to send all required additional `SupplementaryData` as mentioned in the SupplementaryData section below.
 
 ### Note on sending a domestic payment from a different currency
 
-If you choose to send a domestic payment from a supported currency on your Financial Account other than `GBP`, please use the international payments API instead and enter the `DestinationCountryCode` as `GB`. You may then specify the `CurrencyOfTransfer` as mentioned below. You may use the `UK.OBIE.SortCodeAccountNumber` scheme for the CreditorAccount. Note that the payment will still land in GBP in the user's bank account.
-
+If you choose to send a domestic payment to a GB recipient from a supported currency on your Financial Account other than `GBP`, please use the International Payments API instead and enter the `DestinationCountryCode` as `GB`. You may then specify the `CurrencyOfTransfer` as mentioned below. You may use the `UK.OBIE.SortCodeAccountNumber` scheme for the CreditorAccount. Note that the payment will still land in GBP in the user's bank account.
+ 
 ### `CurrencyOfTransfer` requirements
 
 `CurrencyOfTransfer` should always be a supported currency on the user's Stripe Financial Account. This is the currency in which Stripe will debit the user's balance. Users must hold money in that currency at Stripe to be able to send a payment. You may use the AIS APIs to list the user's balances.
 
 ### `DestinationCountryCode` requirements
 
-`DestinationCountryCode` should represent the country code of the country where the recipient is based. Currently, Stripe only accepts `FR`. Stripe's Open Banking API supports international payments to France.
+`DestinationCountryCode` should represent the country code of the country where the recipient is based. See the tables below for acceptable values for the DestinationCountryCode.
 
 ### `InstructedAmount/Currency` requirements
 
@@ -100,13 +85,161 @@ Stripe's Open Banking API requires you to send additional data in the Supplement
 
 Stripe only supports payments that land in the recipient's local currency. For instance, when sending a payment to a France based recipient, the payment will post to the user's bank account in Euros.
 
-## Additional required information for KYC purposes
+### `SupplementaryData` requirements
 
-Apart from `SupplementaryData` requirements mentioned above, Stripe requires additional KYC information for the recipient depending on where they are based. Please ensure you send the following fields:
+Stripe's Open Banking API requires you to send additional data in the SupplementaryData field to ensure a successful payment. The full schema of SupplementaryData is included at the end of this document.
 
-|Recipient Country |Fields to Populate |
-|--|--|
-|France |If `SupplementaryData.CreditorAccount.EntityType` is `individual`, send `SupplementaryData.CreditorAccount.Individual.DateOfBirth`: The date of birth of the recipient in "YYYY-MM-DD" format |
+The following fields are necessary for all payments, except those made with the `UK.OBIE.Wallet` scheme with a pre-existing Stripe recipient account ID:
+-  `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
+-  `SupplementaryData.CreditorAccount.EntityType`: Must be either `individual` or `company` depending on the type of the recipient
 
-## Payment dates
-Payments can be made on all days including Saturdays, Sundays and Bank Holidays
+**Note: SupplementaryData has additional optional fields that are required for a successful payment depending on the destination country:** 
+
+## Additional required bank account information for international payments
+
+The following table mentions the bank account details you must send about the creditor depending on the destinationcountry and the scheme name. 
+
+| DestinationCountryCode | Scheme Name  | CreditorAccount.Identification | SupplementaryData.CreditorAccount.BankAccountDetails.RoutingNumber | SupplementaryData.CreditorAccount.BankAccountDetails.BranchNumber | SupplementaryData.CreditorAccount.BankAccountDetails.SwiftCode |
+| ----------------- | ------------ | ------------------------------ | ------------------------------------------------------------------ | ----------------------------------------------------------------- | -------------------------------------------------------------- |
+| AU                | UK.OBIE.BBAN | Account Number                 | BSB                                                                |                                                                   |                                                                |
+| CA                | UK.OBIE.BBAN | Account Number                 | Transit Number                                                     | Institution Number                                                |                                                                |
+| FR                | UK.OBIE.IBAN | IBAN                           |                                                                    |                                                                   |                                                                |
+| US                | UK.OBIE.BBAN | Account Number                 | Routing Number                                                     |                                                              
+
+## Additional required information KYC information for international payments
+The following table mentions the additional KYC data you must send about the creditor depending on the destination country  and entity type.
+
+
+| DestinationCountryCode | Required fields                              | Required if EntityType=individual | Required if EntityType=company |
+| ----------------- | -------------------------------------------- | --------------------------------- | ------------------------------ |
+| AU                | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address        |
+|                   | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                |
+|                   |                                              |                                   |                                |
+| CA                | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                |
+|                   | SupplementaryData.CreditorAccount.EntityType |                                   |                                |
+|                   |                                              |                                   |                                |
+| FR                | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                |
+|                   | SupplementaryData.CreditorAccount.EntityType |                                   |                                |
+|                   |                                              |                                   |                                |
+| US                | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address        |
+|                   | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                |
+|                   |                                              |                                   |                                |
+
+
+# SupplementaryData Object
+
+The SupplementaryData is an Optional object that contains additional information that Stripe requires in some cases. Please read the tables below to ensure you send all the required data for a successful payment. The shape of the object is defined below:
+
+## SupplementaryData
+
+Properties:
+- **CreditorAccount** (object, required): Information about the creditor's account.
+
+## SupplementaryData.CreditorAccount
+
+Properties:
+- **Email** (string, optional): The email address of the creditor.
+  Example: "foo@bar.com"
+
+- **Destination** (string, optional): Identifier for the recipient's Stripe OutboundDestination object.
+  Example: "gbba_12135r2524542"
+
+- **EntityType** (string, optional): The type of entity the creditor represents.
+  Allowed values: "individual", "company"
+
+- **Individual** (object, optional): Details about the individual creditor. Required if EntityType is "individual".
+
+- **BusinessDetails** (object, optional): Details about the business. Required if EntityType is "company".
+
+- **BankAccountDetails** (object, optional): Details about the bank account.
+
+## SupplementaryData.CreditorAccount.Individual
+
+Properties:
+- **Name** (string, optional): The full name of the individual creditor.
+  Example: "Jean Dupont"
+
+- **DateOfBirth** (string, optional): The date of birth of the individual creditor in ISO 8601 format (YYYY-MM-DD).
+  Example: "1990-05-15"
+
+- **Address** (object, optional): The address of the individual.
+
+## SupplementaryData.CreditorAccount.BusinessDetails
+
+Properties:
+- **RegisteredName** (string, optional): The registered name of the business.
+
+- **Address** (object, optional): The address of the business.
+
+## SupplementaryData.CreditorAccount.BankAccountDetails
+
+Properties:
+- **RoutingNumber** (string, optional): Refer to the table below for the expected value per country.
+
+- **BranchNumber** (string, optional): Refer to the table below for the expected value per country.
+
+- **SwiftCode** (string, optional): Refer to the table below for the expected value per country.
+
+## SupplementaryData.CreditorAccount.Individual.Address and SupplementaryData.CreditorAccount.BusinessDetails.Address
+If the Address is required, please provide all the properties you have in the below mentioned spec.
+
+Properties:
+- **CountryCode** (string, optional): The country code of the address.
+
+- **PostalCode** (string, optional): The postal code of the address.
+
+- **State** (string, optional): The state or province of the address.
+
+- **City** (string, optional): The city of the address.
+
+- **Town** (string, optional): The town of the address.
+
+- **Line1** (string, optional): The first line of the address.
+
+- **Line2** (string, optional): The second line of the address.
+
+## Example payment request for an international payment to US
+
+```json
+{
+  "Data": {
+    "ConsentId": "consent_us12345",
+    "Initiation": {
+      "EndToEndIdentification": "e2e_id_us12345",
+      "InstructionIdentification": "instr_id_us12345",
+      "CreditorAccount": {
+        "SchemeName": "UK.OBIE.BBAN",
+        "Identification": "123456789",
+        "Name": "John Smith"
+      },
+      "InstructedAmount": {
+        "Amount": "1000.00",
+        "Currency": "USD"
+      },
+      "CurrencyOfTransfer": "usd",
+      "DestinationCountryCode": "US",
+      "SupplementaryData": {
+        "CreditorAccount": {
+          "Email": "john.smith@example.com",
+          "EntityType": "individual",
+          "Individual": {
+            "Name": "John Smith",
+            "DateOfBirth": "1985-07-15",
+            "Address": {
+              "CountryCode": "US",
+              "PostalCode": "10001",
+              "State": "NY",
+              "City": "New York",
+              "Line1": "123 Broadway",
+              "Line2": "Apt 4B"
+            }
+          },
+          "BankAccountDetails": {
+            "RoutingNumber": "111000025"
+          }
+        }
+      }
+    }
+  }
+}
+
