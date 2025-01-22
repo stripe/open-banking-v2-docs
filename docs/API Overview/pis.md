@@ -199,6 +199,16 @@ Properties:
 - **Line2** (string, optional): The second line of the address.
 
 ## Example payment request for an international payment to US
+The following shows an example payment request to the US using the guidelines above:
+
+- The `DestinationCountryCode` is "US"
+- The `SchemeName` for the CreditorAccount is `UK.OBIE.BBAN` as mentioned in the Bank Account Details table
+    - The Bank Account Number is set in `CreditorAccount.Identification`
+    - The Bank Account Routing Number is set in `SupplementaryData.CreditorAccount.BankAccountDetails.RoutingNumber`
+- The name of the creditor is set in `CreditorAccount.Name`
+- Additional data about the creditor is set in `SupplementaryData.CreditorAccount`
+    - Since `SupplementaryData.CreditorAccount.Email` and `SupplementaryData.CreditorAccount.EntityType` is needed for all payments, those properties are filled
+    - According to the KYC table, `SupplementaryData.CreditorAccount.Individual.DateOfBirth` and `SupplementaryData.CreditorAccount.Individual.Address` is required for `individual` creditors based in the US. 
 
 ```json
 {
