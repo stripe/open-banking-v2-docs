@@ -74,18 +74,11 @@ If you choose to send a domestic payment to a GB recipient from a supported curr
 
 `InstructedAmount/Currency` can be any currency. The user can specify the instructed amount in any currency and Stripe will do the required FX to extract money from the user's Stripe account and send the money in the recipient's destination currency (see note below).
 
-### `SupplementaryData` requirements
-
-Stripe's Open Banking API requires you to send additional data in the SupplementaryData field to ensure a successful payment:
-
--  `SupplementaryData.CreditorAccount.Email`: Must contain the recipient's email address
--  `SupplementaryData.CreditorAccount.EntityType`: Must be either `individual` or `company` depending on the type of the recipient
-
 ### Note on recipient destination currency
 
 Stripe only supports payments that land in the recipient's local currency. For instance, when sending a payment to a France based recipient, the payment will post to the user's bank account in Euros.
 
-### `SupplementaryData` requirements
+## `SupplementaryData` requirements
 
 Stripe's Open Banking API requires you to send additional data in the SupplementaryData field to ensure a successful payment. The full schema of SupplementaryData is included at the end of this document.
 
@@ -95,22 +88,31 @@ The following fields are necessary for all payments, except those made with the 
 
 **Note: SupplementaryData has additional optional fields that are required for a successful payment depending on the destination country:** 
 
-## Additional required bank account information for international payments
+### Additional required bank account information for international payments
 
-The following table mentions the bank account details you must send about the creditor depending on the destinationcountry and the scheme name. 
+The following table mentions the bank account details you must send about the creditor depending on the destination country and the scheme name. 
 
-| DestinationCountryCode | Scheme Name  | CreditorAccount.Identification | SupplementaryData.CreditorAccount.BankAccountDetails.RoutingNumber | SupplementaryData.CreditorAccount.BankAccountDetails.BranchNumber | SupplementaryData.CreditorAccount.BankAccountDetails.SwiftCode |
+- `Country` refers to the country of the Creditor (`DestinationCountryCode`)
+- `Identification` refers to `Initiation.CreditorAccount.Identification`
+- `RoutingNumber` refers to `SupplementaryData.CreditorAccount.BankAccountDetails.RoutingNumber`
+- `BranchNumber` refers to `SupplementaryData.CreditorAccount.BankAccountDetails.BranchNumber`
+- `SwiftCode` refers to `SupplementaryData.CreditorAccount.BankAccountDetails.SwiftCode`
+
+| Country | Scheme Name  | Identification | RoutingNumber | BranchNumber | SwiftCode |
 | ----------------- | ------------ | ------------------------------ | ------------------------------------------------------------------ | ----------------------------------------------------------------- | -------------------------------------------------------------- |
 | AU                | UK.OBIE.BBAN | Account Number                 | BSB                                                                |                                                                   |                                                                |
 | CA                | UK.OBIE.BBAN | Account Number                 | Transit Number                                                     | Institution Number                                                |                                                                |
 | FR                | UK.OBIE.IBAN | IBAN                           |                                                                    |                                                                   |                                                                |
 | US                | UK.OBIE.BBAN | Account Number                 | Routing Number                                                     |                                                              
 
-## Additional required information KYC information for international payments
-The following table mentions the additional KYC data you must send about the creditor depending on the destination country  and entity type.
+### Additional required information KYC information for international payments
 
+The following table mentions the additional KYC data you must send about the creditor depending on the destination country and entity type.
 
-| DestinationCountryCode | Required fields                              | Required if EntityType=individual | Required if EntityType=company |
+- `Individual` refers to `SupplementaryData.CreditorAccount.Individual`
+- `BusinessDetails` refers to `SupplementaryData.CreditorAccount.BusinessDetails`
+
+| Country | Required fields                              | Required if EntityType=individual | Required if EntityType=company |
 | ----------------- | -------------------------------------------- | --------------------------------- | ------------------------------ |
 | AU                | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address        |
 |                   | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                |
@@ -126,16 +128,16 @@ The following table mentions the additional KYC data you must send about the cre
 |                   |                                              |                                   |                                |
 
 
-# SupplementaryData Object
+## SupplementaryData Object
 
-The SupplementaryData is an Optional object that contains additional information that Stripe requires in some cases. Please read the tables below to ensure you send all the required data for a successful payment. The shape of the object is defined below:
+The SupplementaryData is an Optional object that contains additional information that Stripe requires in some cases. Please read the tables above to ensure you send all the required data for a successful payment. The shape of the object is defined below:
 
-## SupplementaryData
+### SupplementaryData
 
 Properties:
 - **CreditorAccount** (object, required): Information about the creditor's account.
 
-## SupplementaryData.CreditorAccount
+### SupplementaryData.CreditorAccount
 
 Properties:
 - **Email** (string, optional): The email address of the creditor.
@@ -153,7 +155,7 @@ Properties:
 
 - **BankAccountDetails** (object, optional): Details about the bank account.
 
-## SupplementaryData.CreditorAccount.Individual
+### SupplementaryData.CreditorAccount.Individual
 
 Properties:
 - **Name** (string, optional): The full name of the individual creditor.
@@ -164,14 +166,14 @@ Properties:
 
 - **Address** (object, optional): The address of the individual.
 
-## SupplementaryData.CreditorAccount.BusinessDetails
+### SupplementaryData.CreditorAccount.BusinessDetails
 
 Properties:
 - **RegisteredName** (string, optional): The registered name of the business.
 
 - **Address** (object, optional): The address of the business.
 
-## SupplementaryData.CreditorAccount.BankAccountDetails
+### SupplementaryData.CreditorAccount.BankAccountDetails
 
 Properties:
 - **RoutingNumber** (string, optional): Refer to the table below for the expected value per country.
@@ -180,7 +182,7 @@ Properties:
 
 - **SwiftCode** (string, optional): Refer to the table below for the expected value per country.
 
-## SupplementaryData.CreditorAccount.Individual.Address and SupplementaryData.CreditorAccount.BusinessDetails.Address
+### SupplementaryData.CreditorAccount.Individual.Address and SupplementaryData.CreditorAccount.BusinessDetails.Address
 If the Address is required, please provide all the properties you have in the below mentioned spec.
 
 Properties:
@@ -198,7 +200,7 @@ Properties:
 
 - **Line2** (string, optional): The second line of the address.
 
-## Example payment request for an international payment to US
+### Example payment request for an international payment to US
 The following shows an example payment request to the US using the guidelines above:
 
 - The `DestinationCountryCode` is "US"
