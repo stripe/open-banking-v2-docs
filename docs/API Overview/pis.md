@@ -93,12 +93,13 @@ The following fields are necessary for all payments, except those made with the 
 The following table mentions the bank account details you must send about the creditor depending on the destination country and the scheme name. 
 
 - `Country` refers to the country of the Creditor (`DestinationCountryCode`)
+- `SchemeName` refers to `Initiation.CreditorAccount.SchemeName`
 - `Identification` refers to `Initiation.CreditorAccount.Identification`
 - `RoutingNumber` refers to `SupplementaryData.CreditorAccount.BankAccountDetails.RoutingNumber`
 - `BranchNumber` refers to `SupplementaryData.CreditorAccount.BankAccountDetails.BranchNumber`
 - `SwiftCode` refers to `SupplementaryData.CreditorAccount.BankAccountDetails.SwiftCode`
 
-| Country | Scheme Name  | Identification | RoutingNumber | BranchNumber | SwiftCode |
+| Country | SchemeName  | Identification | RoutingNumber | BranchNumber | SwiftCode |
 | ----------------- | ------------ | ------------------------------ | ------------------------------------------------------------------ | ----------------------------------------------------------------- | -------------------------------------------------------------- |
 | AU                | UK.OBIE.BBAN | Account Number                 | BSB                                                                |                                                                   |                                                                |
 | CA                | UK.OBIE.BBAN | Account Number                 | Transit Number                                                     | Institution Number                                                |                                                                |
