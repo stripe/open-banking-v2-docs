@@ -99,36 +99,60 @@ The following table mentions the bank account details you must send about the cr
 - `BranchNumber` refers to `SupplementaryData.CreditorAccount.BankAccountDetails.BranchNumber`
 - `SwiftCode` refers to `SupplementaryData.CreditorAccount.BankAccountDetails.SwiftCode`
 
-| Country | SchemeName   | Identification | RoutingNumber  | BranchNumber       | SwiftCode |
-| ------- | ------------ | -------------- | -------------- | ------------------ | --------- |
-| AT      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| AU      | UK.OBIE.BBAN | Account Number | BSB            |                    |           |
-| BE      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| CA      | UK.OBIE.BBAN | Account Number | Transit Number | Institution Number |           |
-| CH      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| CY      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| CZ      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| DE      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| EE      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| ES      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| FI      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| FR      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| GB      | UK.OBIE.BBAN | Account Number | Sort Code      |                    |           |
-| GR      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| HR      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| IE      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| IS      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| IT      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| LI      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| LT      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| LU      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| LV      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| MT      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| NL      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| PT      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| SI      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| SK      | UK.OBIE.IBAN | IBAN           |                |                    |           |
-| US      | UK.OBIE.BBAN | Account Number | Routing Number |                    |
+| Country | SchemeName   | Identification | RoutingNumber  | BranchNumber       | SwiftCode  |
+| ------- | ------------ | -------------- | -------------- | ------------------ | ---------- |
+| AT      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| AU      | UK.OBIE.BBAN | Account Number | BSB            |                    |            |
+| BE      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| BG      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| BJ      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| BS      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
+| CA      | UK.OBIE.BBAN | Account Number | Transit Number | Institution Number |            |
+| CH      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| CI      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| CY      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| CZ      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| DE      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| DK      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| EC      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
+| EE      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| ES      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| FI      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| FR      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| GB      | UK.OBIE.BBAN | Account Number | Sort Code      |                    |            |
+| GR      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| HR      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| HU      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| ID      | UK.OBIE.BBAN | Account Number | Bank Code      |                    |            |
+| IE      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| IL      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| IN      | UK.OBIE.BBAN | Account Number | IFSC Code      |                    |            |
+| IS      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| IT      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| LI      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| LT      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| LU      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| LV      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| MT      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| MX      | UK.OBIE.BBAN | CLABE          |                |                    |            |
+| NL      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| NO      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| NZ      | UK.OBIE.BBAN | Account Number |                |                    |            |
+| PA      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
+| PH      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| PL      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| PT      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| RO      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| SE      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| SG      | UK.OBIE.BBAN | Account Number | Bank Code      | Branch Code        |            |
+| SI      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| SK      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| SN      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| SV      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| TN      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| TR      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| US      | UK.OBIE.BBAN | Account Number | Routing Number |                    |            |
+| ZA      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 
 ### Additional required information KYC information for international payments
 
@@ -139,25 +163,31 @@ The following table mentions the additional KYC data you must send about the cre
 
 | Country | Required fields                              | Required if EntityType=individual | Required if EntityType=company  |
 | ------- | -------------------------------------------- | --------------------------------- | ------------------------------- |
+| AT      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | AU      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
+|         |                                              |                                   |                                 |
+| BE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| BG      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| BJ      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
+|         |                                              |                                   |                                 |
+| BS      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
 |         |                                              |                                   |                                 |
 | CA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
-| FR      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| US      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
-|         |                                              |                                   |                                 |
-| AT      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| BE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
 | CH      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| CI      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | CY      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
@@ -169,6 +199,12 @@ The following table mentions the additional KYC data you must send about the cre
 | DE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| DK      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| EC      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
+|         |                                              |                                   |                                 |
 | EE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
@@ -178,13 +214,31 @@ The following table mentions the additional KYC data you must send about the cre
 | FI      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| FR      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| GB      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | GR      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | HR      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| HU      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| ID      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | IE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| IL      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| IN      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | IS      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
@@ -208,10 +262,34 @@ The following table mentions the additional KYC data you must send about the cre
 | MT      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| MX      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | NL      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| NO      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| NZ      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| PA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
+|         |                                              |                                   |                                 |
+| PH      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| PL      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | PT      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| RO      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| SE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | SI      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
@@ -220,98 +298,23 @@ The following table mentions the additional KYC data you must send about the cre
 | SK      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
-| GB      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| ID      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| PH      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| PL      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| IL      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| IN      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| HU      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| NO      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| DK      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| RO      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| NZ      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| BG      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+| SG      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | SN      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
-| CI      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| MX      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+| SV      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
 |         |                                              |                                   |                                 |
 | TN      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
 |         |                                              |                                   |                                 |
-| BS      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
-|         |                                              |                                   |                                 |
-| EC      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
-|         |                                              |                                   |                                 |
-| PA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
-|         |                                              |                                   |                                 |
-| SV      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
-|         |                                              |                                   |                                 |
-| BJ      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| MN      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
-|         |                                              |                                   |                                 |
-| RS      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
-|         |                                              |                                   |                                 |
-| KE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
-|         |                                              |                                   |                                 |
-| NA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
-|         |                                              |                                   |                                 |
-| MU      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
-|         |                                              |                                   |                                 |
-| BA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
-|         |                                              |                                   |                                 |
-| ET      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
-|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
-|         |                                              |                                   |                                 |
 | TR      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
-| SE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
-|         |                                              |                                   |                                 |
-| SG      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
-|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+| US      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
 |         |                                              |                                   |                                 |
 | ZA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
