@@ -121,7 +121,7 @@ The following table mentions the bank account details you must send about the cr
 | ET      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | FI      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | FR      | UK.OBIE.IBAN | IBAN           |                |                    |            |
-| GB      | UK.OBIE.BBAN | Account Number | Sort Code      |                    |            |
+| GB      | UK.OBIE.SortCodeAccountNumber | SortCodeAccountNumber |       |                    |            |
 | GR      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | HR      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | HU      | UK.OBIE.IBAN | IBAN           |                |                    |            |
