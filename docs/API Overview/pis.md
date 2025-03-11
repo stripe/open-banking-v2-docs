@@ -145,7 +145,7 @@ The following table mentions the bank account details you must send about the cr
 | NO      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | NZ      | UK.OBIE.BBAN | Account Number |                |                    |            |
 | PA      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
-| PH      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| PH      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | PL      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | PT      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | RO      | UK.OBIE.IBAN | IBAN           |                |                    |            |
