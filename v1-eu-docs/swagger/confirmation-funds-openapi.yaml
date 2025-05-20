@@ -9,7 +9,7 @@ info:
   license:
     name: open-licence
     url: https://www.openbanking.org.uk/open-licence
-  version: 3.1.10
+  version: 3.1.11
 paths:
   /funds-confirmation-consents:
     post:
@@ -22,8 +22,8 @@ paths:
           name: x-fapi-auth-date
           required: false
           description: |-
-            The time when the PSU last logged in with the TPP.
-            All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below:
+            The time when the PSU last logged in with the TPP. 
+            All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
             Sun, 10 Sep 2017 19:43:31 UTC
           schema:
             type: string
@@ -68,7 +68,7 @@ paths:
                     ExpirationDateTime:
                       description: |-
                         Specified date and time the funds confirmation authorisation will expire.
-                         If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                         If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                         All date-time fields in responses must include the timezone. An example is below:
                         2017-04-05T10:43:07+00:00
                       type: string
@@ -89,6 +89,7 @@ paths:
                             - UK.OBIE.PAN
                             - UK.OBIE.Paym
                             - UK.OBIE.SortCodeAccountNumber
+                            - UK.OBIE.Wallet
                         Identification:
                           description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                           type: string
@@ -103,7 +104,7 @@ paths:
                           maxLength: 350
                         SecondaryIdentification:
                           description: |-
-                            This is secondary identification of the account, as assigned by the account servicing institution.
+                            This is secondary identification of the account, as assigned by the account servicing institution. 
                             This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                           type: string
                           minLength: 1
@@ -143,7 +144,7 @@ paths:
                         maxLength: 128
                       CreationDateTime:
                         description: |-
-                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -158,7 +159,7 @@ paths:
                           - Revoked
                       StatusUpdateDateTime:
                         description: |-
-                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -166,7 +167,7 @@ paths:
                       ExpirationDateTime:
                         description: |-
                           Specified date and time the funds confirmation authorisation will expire.
-                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -187,6 +188,7 @@ paths:
                               - UK.OBIE.PAN
                               - UK.OBIE.Paym
                               - UK.OBIE.SortCodeAccountNumber
+                              - UK.OBIE.Wallet
                           Identification:
                             description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                             type: string
@@ -201,7 +203,7 @@ paths:
                             maxLength: 350
                           SecondaryIdentification:
                             description: |-
-                              This is secondary identification of the account, as assigned by the account servicing institution.
+                              This is secondary identification of the account, as assigned by the account servicing institution. 
                               This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                             type: string
                             minLength: 1
@@ -238,14 +240,14 @@ paths:
                         format: int32
                       FirstAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
                         format: date-time
                       LastAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -274,7 +276,7 @@ paths:
                         maxLength: 128
                       CreationDateTime:
                         description: |-
-                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -289,7 +291,7 @@ paths:
                           - Revoked
                       StatusUpdateDateTime:
                         description: |-
-                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -297,7 +299,7 @@ paths:
                       ExpirationDateTime:
                         description: |-
                           Specified date and time the funds confirmation authorisation will expire.
-                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -318,6 +320,7 @@ paths:
                               - UK.OBIE.PAN
                               - UK.OBIE.Paym
                               - UK.OBIE.SortCodeAccountNumber
+                              - UK.OBIE.Wallet
                           Identification:
                             description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                             type: string
@@ -332,7 +335,7 @@ paths:
                             maxLength: 350
                           SecondaryIdentification:
                             description: |-
-                              This is secondary identification of the account, as assigned by the account servicing institution.
+                              This is secondary identification of the account, as assigned by the account servicing institution. 
                               This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                             type: string
                             minLength: 1
@@ -369,14 +372,14 @@ paths:
                         format: int32
                       FirstAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
                         format: date-time
                       LastAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -405,7 +408,7 @@ paths:
                         maxLength: 128
                       CreationDateTime:
                         description: |-
-                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -420,7 +423,7 @@ paths:
                           - Revoked
                       StatusUpdateDateTime:
                         description: |-
-                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -428,7 +431,7 @@ paths:
                       ExpirationDateTime:
                         description: |-
                           Specified date and time the funds confirmation authorisation will expire.
-                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -449,6 +452,7 @@ paths:
                               - UK.OBIE.PAN
                               - UK.OBIE.Paym
                               - UK.OBIE.SortCodeAccountNumber
+                              - UK.OBIE.Wallet
                           Identification:
                             description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                             type: string
@@ -463,7 +467,7 @@ paths:
                             maxLength: 350
                           SecondaryIdentification:
                             description: |-
-                              This is secondary identification of the account, as assigned by the account servicing institution.
+                              This is secondary identification of the account, as assigned by the account servicing institution. 
                               This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                             type: string
                             minLength: 1
@@ -500,14 +504,14 @@ paths:
                         format: int32
                       FirstAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
                         format: date-time
                       LastAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1342,8 +1346,8 @@ paths:
           name: x-fapi-auth-date
           required: false
           description: |-
-            The time when the PSU last logged in with the TPP.
-            All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below:
+            The time when the PSU last logged in with the TPP. 
+            All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
             Sun, 10 Sep 2017 19:43:31 UTC
           schema:
             type: string
@@ -1404,7 +1408,7 @@ paths:
                         maxLength: 128
                       CreationDateTime:
                         description: |-
-                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1419,7 +1423,7 @@ paths:
                           - Revoked
                       StatusUpdateDateTime:
                         description: |-
-                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1427,7 +1431,7 @@ paths:
                       ExpirationDateTime:
                         description: |-
                           Specified date and time the funds confirmation authorisation will expire.
-                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1448,6 +1452,7 @@ paths:
                               - UK.OBIE.PAN
                               - UK.OBIE.Paym
                               - UK.OBIE.SortCodeAccountNumber
+                              - UK.OBIE.Wallet
                           Identification:
                             description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                             type: string
@@ -1462,7 +1467,7 @@ paths:
                             maxLength: 350
                           SecondaryIdentification:
                             description: |-
-                              This is secondary identification of the account, as assigned by the account servicing institution.
+                              This is secondary identification of the account, as assigned by the account servicing institution. 
                               This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                             type: string
                             minLength: 1
@@ -1499,14 +1504,14 @@ paths:
                         format: int32
                       FirstAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
                         format: date-time
                       LastAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1535,7 +1540,7 @@ paths:
                         maxLength: 128
                       CreationDateTime:
                         description: |-
-                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1550,7 +1555,7 @@ paths:
                           - Revoked
                       StatusUpdateDateTime:
                         description: |-
-                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1558,7 +1563,7 @@ paths:
                       ExpirationDateTime:
                         description: |-
                           Specified date and time the funds confirmation authorisation will expire.
-                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1579,6 +1584,7 @@ paths:
                               - UK.OBIE.PAN
                               - UK.OBIE.Paym
                               - UK.OBIE.SortCodeAccountNumber
+                              - UK.OBIE.Wallet
                           Identification:
                             description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                             type: string
@@ -1593,7 +1599,7 @@ paths:
                             maxLength: 350
                           SecondaryIdentification:
                             description: |-
-                              This is secondary identification of the account, as assigned by the account servicing institution.
+                              This is secondary identification of the account, as assigned by the account servicing institution. 
                               This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                             type: string
                             minLength: 1
@@ -1630,14 +1636,14 @@ paths:
                         format: int32
                       FirstAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
                         format: date-time
                       LastAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1666,7 +1672,7 @@ paths:
                         maxLength: 128
                       CreationDateTime:
                         description: |-
-                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1681,7 +1687,7 @@ paths:
                           - Revoked
                       StatusUpdateDateTime:
                         description: |-
-                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1689,7 +1695,7 @@ paths:
                       ExpirationDateTime:
                         description: |-
                           Specified date and time the funds confirmation authorisation will expire.
-                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -1710,6 +1716,7 @@ paths:
                               - UK.OBIE.PAN
                               - UK.OBIE.Paym
                               - UK.OBIE.SortCodeAccountNumber
+                              - UK.OBIE.Wallet
                           Identification:
                             description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                             type: string
@@ -1724,7 +1731,7 @@ paths:
                             maxLength: 350
                           SecondaryIdentification:
                             description: |-
-                              This is secondary identification of the account, as assigned by the account servicing institution.
+                              This is secondary identification of the account, as assigned by the account servicing institution. 
                               This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                             type: string
                             minLength: 1
@@ -1761,14 +1768,14 @@ paths:
                         format: int32
                       FirstAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
                         format: date-time
                       LastAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -2594,8 +2601,8 @@ paths:
           name: x-fapi-auth-date
           required: false
           description: |-
-            The time when the PSU last logged in with the TPP.
-            All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below:
+            The time when the PSU last logged in with the TPP. 
+            All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
             Sun, 10 Sep 2017 19:43:31 UTC
           schema:
             type: string
@@ -3447,8 +3454,8 @@ paths:
           name: x-fapi-auth-date
           required: false
           description: |-
-            The time when the PSU last logged in with the TPP.
-            All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below:
+            The time when the PSU last logged in with the TPP. 
+            All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
             Sun, 10 Sep 2017 19:43:31 UTC
           schema:
             type: string
@@ -3558,7 +3565,7 @@ paths:
                         maxLength: 128
                       CreationDateTime:
                         description: |-
-                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -3618,14 +3625,14 @@ paths:
                         format: int32
                       FirstAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
                         format: date-time
                       LastAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -3660,7 +3667,7 @@ paths:
                         maxLength: 128
                       CreationDateTime:
                         description: |-
-                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -3720,14 +3727,14 @@ paths:
                         format: int32
                       FirstAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
                         format: date-time
                       LastAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -3762,7 +3769,7 @@ paths:
                         maxLength: 128
                       CreationDateTime:
                         description: |-
-                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -3822,14 +3829,14 @@ paths:
                         format: int32
                       FirstAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
                         format: date-time
                       LastAvailableDateTime:
                         description: |-
-                          All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                          All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                           All date-time fields in responses must include the timezone. An example is below:
                           2017-04-05T10:43:07+00:00
                         type: string
@@ -4684,8 +4691,8 @@ components:
       name: x-fapi-auth-date
       required: false
       description: |-
-        The time when the PSU last logged in with the TPP.
-        All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below:
+        The time when the PSU last logged in with the TPP. 
+        All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
         Sun, 10 Sep 2017 19:43:31 UTC
       schema:
         type: string
@@ -4747,7 +4754,7 @@ components:
                     maxLength: 128
                   CreationDateTime:
                     description: |-
-                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -4762,7 +4769,7 @@ components:
                       - Revoked
                   StatusUpdateDateTime:
                     description: |-
-                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -4770,7 +4777,7 @@ components:
                   ExpirationDateTime:
                     description: |-
                       Specified date and time the funds confirmation authorisation will expire.
-                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -4791,6 +4798,7 @@ components:
                           - UK.OBIE.PAN
                           - UK.OBIE.Paym
                           - UK.OBIE.SortCodeAccountNumber
+                          - UK.OBIE.Wallet
                       Identification:
                         description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                         type: string
@@ -4805,7 +4813,7 @@ components:
                         maxLength: 350
                       SecondaryIdentification:
                         description: |-
-                          This is secondary identification of the account, as assigned by the account servicing institution.
+                          This is secondary identification of the account, as assigned by the account servicing institution. 
                           This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                         type: string
                         minLength: 1
@@ -4842,14 +4850,14 @@ components:
                     format: int32
                   FirstAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
                     format: date-time
                   LastAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -4878,7 +4886,7 @@ components:
                     maxLength: 128
                   CreationDateTime:
                     description: |-
-                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -4893,7 +4901,7 @@ components:
                       - Revoked
                   StatusUpdateDateTime:
                     description: |-
-                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -4901,7 +4909,7 @@ components:
                   ExpirationDateTime:
                     description: |-
                       Specified date and time the funds confirmation authorisation will expire.
-                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -4922,6 +4930,7 @@ components:
                           - UK.OBIE.PAN
                           - UK.OBIE.Paym
                           - UK.OBIE.SortCodeAccountNumber
+                          - UK.OBIE.Wallet
                       Identification:
                         description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                         type: string
@@ -4936,7 +4945,7 @@ components:
                         maxLength: 350
                       SecondaryIdentification:
                         description: |-
-                          This is secondary identification of the account, as assigned by the account servicing institution.
+                          This is secondary identification of the account, as assigned by the account servicing institution. 
                           This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                         type: string
                         minLength: 1
@@ -4973,14 +4982,14 @@ components:
                     format: int32
                   FirstAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
                     format: date-time
                   LastAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5009,7 +5018,7 @@ components:
                     maxLength: 128
                   CreationDateTime:
                     description: |-
-                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5024,7 +5033,7 @@ components:
                       - Revoked
                   StatusUpdateDateTime:
                     description: |-
-                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5032,7 +5041,7 @@ components:
                   ExpirationDateTime:
                     description: |-
                       Specified date and time the funds confirmation authorisation will expire.
-                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5053,6 +5062,7 @@ components:
                           - UK.OBIE.PAN
                           - UK.OBIE.Paym
                           - UK.OBIE.SortCodeAccountNumber
+                          - UK.OBIE.Wallet
                       Identification:
                         description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                         type: string
@@ -5067,7 +5077,7 @@ components:
                         maxLength: 350
                       SecondaryIdentification:
                         description: |-
-                          This is secondary identification of the account, as assigned by the account servicing institution.
+                          This is secondary identification of the account, as assigned by the account servicing institution. 
                           This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                         type: string
                         minLength: 1
@@ -5104,14 +5114,14 @@ components:
                     format: int32
                   FirstAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
                     format: date-time
                   LastAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5149,7 +5159,7 @@ components:
                     maxLength: 128
                   CreationDateTime:
                     description: |-
-                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5164,7 +5174,7 @@ components:
                       - Revoked
                   StatusUpdateDateTime:
                     description: |-
-                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5172,7 +5182,7 @@ components:
                   ExpirationDateTime:
                     description: |-
                       Specified date and time the funds confirmation authorisation will expire.
-                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5193,6 +5203,7 @@ components:
                           - UK.OBIE.PAN
                           - UK.OBIE.Paym
                           - UK.OBIE.SortCodeAccountNumber
+                          - UK.OBIE.Wallet
                       Identification:
                         description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                         type: string
@@ -5207,7 +5218,7 @@ components:
                         maxLength: 350
                       SecondaryIdentification:
                         description: |-
-                          This is secondary identification of the account, as assigned by the account servicing institution.
+                          This is secondary identification of the account, as assigned by the account servicing institution. 
                           This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                         type: string
                         minLength: 1
@@ -5244,14 +5255,14 @@ components:
                     format: int32
                   FirstAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
                     format: date-time
                   LastAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5280,7 +5291,7 @@ components:
                     maxLength: 128
                   CreationDateTime:
                     description: |-
-                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5295,7 +5306,7 @@ components:
                       - Revoked
                   StatusUpdateDateTime:
                     description: |-
-                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5303,7 +5314,7 @@ components:
                   ExpirationDateTime:
                     description: |-
                       Specified date and time the funds confirmation authorisation will expire.
-                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5324,6 +5335,7 @@ components:
                           - UK.OBIE.PAN
                           - UK.OBIE.Paym
                           - UK.OBIE.SortCodeAccountNumber
+                          - UK.OBIE.Wallet
                       Identification:
                         description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                         type: string
@@ -5338,7 +5350,7 @@ components:
                         maxLength: 350
                       SecondaryIdentification:
                         description: |-
-                          This is secondary identification of the account, as assigned by the account servicing institution.
+                          This is secondary identification of the account, as assigned by the account servicing institution. 
                           This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                         type: string
                         minLength: 1
@@ -5375,14 +5387,14 @@ components:
                     format: int32
                   FirstAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
                     format: date-time
                   LastAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5411,7 +5423,7 @@ components:
                     maxLength: 128
                   CreationDateTime:
                     description: |-
-                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5426,7 +5438,7 @@ components:
                       - Revoked
                   StatusUpdateDateTime:
                     description: |-
-                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5434,7 +5446,7 @@ components:
                   ExpirationDateTime:
                     description: |-
                       Specified date and time the funds confirmation authorisation will expire.
-                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5455,6 +5467,7 @@ components:
                           - UK.OBIE.PAN
                           - UK.OBIE.Paym
                           - UK.OBIE.SortCodeAccountNumber
+                          - UK.OBIE.Wallet
                       Identification:
                         description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                         type: string
@@ -5469,7 +5482,7 @@ components:
                         maxLength: 350
                       SecondaryIdentification:
                         description: |-
-                          This is secondary identification of the account, as assigned by the account servicing institution.
+                          This is secondary identification of the account, as assigned by the account servicing institution. 
                           This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                         type: string
                         minLength: 1
@@ -5506,14 +5519,14 @@ components:
                     format: int32
                   FirstAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
                     format: date-time
                   LastAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5565,7 +5578,7 @@ components:
                     maxLength: 128
                   CreationDateTime:
                     description: |-
-                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5625,14 +5638,14 @@ components:
                     format: int32
                   FirstAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
                     format: date-time
                   LastAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5667,7 +5680,7 @@ components:
                     maxLength: 128
                   CreationDateTime:
                     description: |-
-                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5727,14 +5740,14 @@ components:
                     format: int32
                   FirstAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
                     format: date-time
                   LastAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5769,7 +5782,7 @@ components:
                     maxLength: 128
                   CreationDateTime:
                     description: |-
-                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -5829,14 +5842,14 @@ components:
                     format: int32
                   FirstAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
                     format: date-time
                   LastAvailableDateTime:
                     description: |-
-                      All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                      All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                       All date-time fields in responses must include the timezone. An example is below:
                       2017-04-05T10:43:07+00:00
                     type: string
@@ -6680,7 +6693,7 @@ components:
   schemas:
     ISODateTime:
       description: |-
-        All dates in the JSON payloads are represented in ISO 8601 date-time format.
+        All dates in the JSON payloads are represented in ISO 8601 date-time format. 
         All date-time fields in responses must include the timezone. An example is below:
         2017-04-05T10:43:07+00:00
       type: string
@@ -6717,14 +6730,14 @@ components:
           format: int32
         FirstAvailableDateTime:
           description: |-
-            All dates in the JSON payloads are represented in ISO 8601 date-time format.
+            All dates in the JSON payloads are represented in ISO 8601 date-time format. 
             All date-time fields in responses must include the timezone. An example is below:
             2017-04-05T10:43:07+00:00
           type: string
           format: date-time
         LastAvailableDateTime:
           description: |-
-            All dates in the JSON payloads are represented in ISO 8601 date-time format.
+            All dates in the JSON payloads are represented in ISO 8601 date-time format. 
             All date-time fields in responses must include the timezone. An example is below:
             2017-04-05T10:43:07+00:00
           type: string
@@ -6916,7 +6929,7 @@ components:
             ExpirationDateTime:
               description: |-
                 Specified date and time the funds confirmation authorisation will expire.
-                 If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                 If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                 All date-time fields in responses must include the timezone. An example is below:
                 2017-04-05T10:43:07+00:00
               type: string
@@ -6937,6 +6950,7 @@ components:
                     - UK.OBIE.PAN
                     - UK.OBIE.Paym
                     - UK.OBIE.SortCodeAccountNumber
+                    - UK.OBIE.Wallet
                 Identification:
                   description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                   type: string
@@ -6951,7 +6965,7 @@ components:
                   maxLength: 350
                 SecondaryIdentification:
                   description: |-
-                    This is secondary identification of the account, as assigned by the account servicing institution.
+                    This is secondary identification of the account, as assigned by the account servicing institution. 
                     This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                   type: string
                   minLength: 1
@@ -6978,7 +6992,7 @@ components:
               maxLength: 128
             CreationDateTime:
               description: |-
-                Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                 All date-time fields in responses must include the timezone. An example is below:
                 2017-04-05T10:43:07+00:00
               type: string
@@ -6993,7 +7007,7 @@ components:
                 - Revoked
             StatusUpdateDateTime:
               description: |-
-                Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                 All date-time fields in responses must include the timezone. An example is below:
                 2017-04-05T10:43:07+00:00
               type: string
@@ -7001,7 +7015,7 @@ components:
             ExpirationDateTime:
               description: |-
                 Specified date and time the funds confirmation authorisation will expire.
-                If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                If this is not populated, the authorisation will be open ended.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                 All date-time fields in responses must include the timezone. An example is below:
                 2017-04-05T10:43:07+00:00
               type: string
@@ -7022,6 +7036,7 @@ components:
                     - UK.OBIE.PAN
                     - UK.OBIE.Paym
                     - UK.OBIE.SortCodeAccountNumber
+                    - UK.OBIE.Wallet
                 Identification:
                   description: Identification assigned by an institution to identify an account. This identification is known by the account owner.
                   type: string
@@ -7036,7 +7051,7 @@ components:
                   maxLength: 350
                 SecondaryIdentification:
                   description: |-
-                    This is secondary identification of the account, as assigned by the account servicing institution.
+                    This is secondary identification of the account, as assigned by the account servicing institution. 
                     This can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).
                   type: string
                   minLength: 1
@@ -7073,14 +7088,14 @@ components:
               format: int32
             FirstAvailableDateTime:
               description: |-
-                All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                 All date-time fields in responses must include the timezone. An example is below:
                 2017-04-05T10:43:07+00:00
               type: string
               format: date-time
             LastAvailableDateTime:
               description: |-
-                All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                 All date-time fields in responses must include the timezone. An example is below:
                 2017-04-05T10:43:07+00:00
               type: string
@@ -7114,7 +7129,7 @@ components:
               maxLength: 128
             CreationDateTime:
               description: |-
-                Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                 All date-time fields in responses must include the timezone. An example is below:
                 2017-04-05T10:43:07+00:00
               type: string
@@ -7174,14 +7189,14 @@ components:
               format: int32
             FirstAvailableDateTime:
               description: |-
-                All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                 All date-time fields in responses must include the timezone. An example is below:
                 2017-04-05T10:43:07+00:00
               type: string
               format: date-time
             LastAvailableDateTime:
               description: |-
-                All dates in the JSON payloads are represented in ISO 8601 date-time format.
+                All dates in the JSON payloads are represented in ISO 8601 date-time format. 
                 All date-time fields in responses must include the timezone. An example is below:
                 2017-04-05T10:43:07+00:00
               type: string
