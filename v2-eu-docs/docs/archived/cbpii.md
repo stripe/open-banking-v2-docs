@@ -9,4 +9,4 @@ The Confirmation of Funds API Profile describes the flows and common functionali
 This profile should be read in conjunction with a compatible Read/Write Data API Profile which provides a description of the elements that are common across all the Read/Write Data APIs, and compatible individual resources.
 
 ## Base URL
-The base URL for all CBPII APIs is: `https://rs1.api.stripeopenbanking.com/open-banking/v3.1/cbpii/**`
+The base URL for all CBPII APIs is: `https://rs1.api-v2-eu.stripeopenbanking.com/open-banking/v3.1/cbpii/**`
