@@ -1,7 +1,7 @@
 # AISP API Overview
 
 ## Base URL
-The base URL for all AIS APIs is: `https://rs1.api.stripeopenbanking.com/open-banking/v3.1/aisp/**`
+The base URL for all AIS APIs is: `https://rs1.api-v2-eu.stripeopenbanking.com/open-banking/v3.1/aisp/**`
 
 ## Account Access Consents
 [Account Access Consents API](/perry/developer/documentation?resource=ukhub-stripe-portal&document=swagger/account-info-openapi.yaml#operations-tag-Account_Access)
