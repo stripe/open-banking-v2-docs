@@ -3,7 +3,7 @@
 ## Base URL
 The base URL for all PIS APIs is: `https://rs1.api-v2-eu.stripeopenbanking.com/open-banking/v3.1/pisp/**`
 
-## Supported Payment Types (see definitions for EU below)
+## Supported Payment Types
 The Stripe API currently only supports:
 - Domestic Payments
 - International Payments
@@ -16,14 +16,6 @@ The Stripe API __does not__ support:
 - Domestic Standing Orders
 
 The payment request from TPP must have the creditor information.
-
-### A note on the definitions of domestic and international payments for the EU
-We define domestic and international payments as the following:
-
-- Domestic Payment - A payment where the creditor's country is INSIDE the *Eurozone* area
-- International Payment - A payment where the creditor's country is OUTSIDE the *Eurozone* area
-
-> Eurozone: The 20 EU member states whose primary currency is EUR (Austria, Belgium, Croatia, Cyprus, Estonia, Finland, France, Germany, Greece, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Portugal, Slovakia, Slovenia, Spain)
 
 ## The following apply to all payment consents (domestic and international):
 
@@ -50,14 +42,13 @@ The PISP may also opt to populate reference field on behalf of the PSU
 
 ### `CreditorAccount` requirements
 
-`CreditorAccount.SchemeName` supports either `UK.OBIE.IBAN` or `UK.OBIE.Wallet`. Providing any other value will return an error.
+`CreditorAccount.SchemeName` supports `UK.OBIE.Wallet`. Providing any other value will return an error.
 
 -  `UK.OBIE.Wallet`
    -  `CreditorAccount.Identification`: Must be the Stripe recipient account ID (e.g. `acct_test_123`)
-   -  `SupplementaryData.CreditorAccount.Destination`: Optional if the recipient has a default outbound destination, otherwise the destination ID (e.g. `gbba_test_123`)
--  `UK.OBIE.IBAN`
-   -  `CreditorAccount.Identification`: Must be the IBAN number associated with the account
-   - `SupplementaryData.CreditorAccount.Address.CountryCode`: Must provide the destination country code for intra-EU payments
+   -  `SupplementaryData.CreditorAccount.Destination`: Optional if the recipient has a default outbound destination, otherwise the destination ID (e.g. `frba_test_123`)
+
+> Note: Please use international payment consents for IBAN domestic payments and set the `DestinationCountryCode` to the same country you are sending from 
 
 ## The following apply to all international payment consents:
 
