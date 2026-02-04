@@ -1,0 +1,131 @@
+name: Copy v1-uk-docs dir to v1-uk-docs-release branch, v1-eu-docs dir to v1-eu-docs-release branch, and v2-eu-docs dir to v2-eu-docs-release branch
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  copy-v1-uk-docs:
+    runs-on: ubuntu-latest
+
+    permissions: 
+      contents: write
+
+    steps:
+    - name: Checkout Source Branch
+      uses: actions/checkout@v3
+      with:
+        ref: master
+
+    - name: Copy v1-uk-docs to Temp Directory
+      run: |
+        mkdir -p temp-v1-uk-docs
+        cp -r v1-uk-docs/* temp-v1-uk-docs/
+
+    - name: Prepare v1-uk-docs-release Branch
+      run: |
+        git fetch origin +refs/heads/v1-uk-docs-release:refs/remotes/origin/v1-uk-docs-release
+        git checkout v1-uk-docs-release || git checkout --orphan v1-uk-docs-release
+
+    - name: Configure Git
+      run: |
+        git config user.name "adithyac-stripe"
+        git config user.email "adithyac@stripe.com"
+
+    - name: Copy from Temp Directory to v1-uk-docs-release
+      run: |
+        cp -r temp-v1-uk-docs/* .
+        git add .
+        git commit -m "Copy v1-uk-docs to root of v1-uk-docs-release. Sync from ${{ github.sha }}" || echo "No changes to commit"
+
+    - name: Push to v1-uk-docs-release
+      run: |
+        git push --force origin v1-uk-docs-release
+
+    - name: Clean Up Temp Directory
+      run: |
+        rm -rf temp-v1-uk-docs
+
+  copy-v1-eu-docs:
+    runs-on: ubuntu-latest
+
+    permissions: 
+      contents: write
+
+    steps:
+    - name: Checkout Source Branch
+      uses: actions/checkout@v3
+      with:
+        ref: master
+
+    - name: Copy v1-eu-docs to Temp Directory
+      run: |
+        mkdir -p temp-v1-eu-docs
+        cp -r v1-eu-docs/* temp-v1-eu-docs/
+
+    - name: Prepare v1-eu-docs-release Branch
+      run: |
+        git fetch origin +refs/heads/v1-eu-docs-release:refs/remotes/origin/v1-eu-docs-release
+        git checkout v1-eu-docs-release || git checkout --orphan v1-eu-docs-release
+
+    - name: Configure Git
+      run: |
+        git config user.name "adithyac-stripe"
+        git config user.email "adithyac@stripe.com"
+
+    - name: Copy from Temp Directory to v1-eu-docs-release
+      run: |
+        cp -r temp-v1-eu-docs/* .
+        git add .
+        git commit -m "Copy v1-eu-docs to root of v1-eu-docs-release. Sync from ${{ github.sha }}" || echo "No changes to commit"
+
+    - name: Push to v1-eu-docs-release Branch
+      run: |
+        git push --force origin v1-eu-docs-release
+        
+    - name: Clean Up Temp Directory
+      run: |
+        rm -rf temp-v1-eu-docs
+
+  copy-v2-eu-docs:
+    runs-on: ubuntu-latest
+
+    permissions: 
+      contents: write
+
+    steps:
+    - name: Checkout Source Branch
+      uses: actions/checkout@v3
+      with:
+        ref: master
+
+    - name: Copy v2-eu-docs to Temp Directory
+      run: |
+        mkdir -p temp-v2-eu-docs
+        cp -r v2-eu-docs/* temp-v2-eu-docs/
+
+    - name: Prepare v2-eu-docs-release Branch
+      run: |
+        git fetch origin +refs/heads/v2-eu-docs-release:refs/remotes/origin/v2-eu-docs-release
+        git checkout v2-eu-docs-release || git checkout --orphan v2-eu-docs-release
+
+    - name: Configure Git
+      run: |
+        git config user.name "adithyac-stripe"
+        git config user.email "adithyac@stripe.com"
+
+    - name: Copy from Temp Directory to v2-eu-docs-release
+      run: |
+        cp -r temp-v2-eu-docs/* .
+        git add .
+        git commit -m "Copy v2-eu-docs to root of v2-eu-docs-release. Sync from ${{ github.sha }}" || echo "No changes to commit"
+
+    - name: Push to v2-eu-docs-release Branch
+      run: |
+        git push --force origin v2-eu-docs-release
+        
+    - name: Clean Up Temp Directory
+      run: |
+        rm -rf temp-v2-eu-docs
