@@ -196,6 +196,12 @@ The following table mentions the additional KYC data you must send about the cre
 
 | Country | Required fields                              | Required if EntityType=individual | Required if EntityType=company  |
 | ------- | -------------------------------------------- | --------------------------------- | ------------------------------- |
+| AE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
+|         |                                              |                                   |                                 |
+| AG      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | AL      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
 |         |                                              |                                   |                                 |
@@ -215,6 +221,9 @@ The following table mentions the additional KYC data you must send about the cre
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | BG      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| BH      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | BJ      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
@@ -274,11 +283,17 @@ The following table mentions the additional KYC data you must send about the cre
 | GB      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| GM      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
+|         |                                              |                                   |                                 |
 | GR      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | GY      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
+|         |                                              |                                   |                                 |
+| HK      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | HR      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
@@ -316,6 +331,9 @@ The following table mentions the additional KYC data you must send about the cre
 | KW      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| LC      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | LI      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
@@ -331,8 +349,11 @@ The following table mentions the additional KYC data you must send about the cre
 | LV      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
-| MA     | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+| MA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| MG      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
 |         |                                              |                                   |                                 |
 | MN      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
@@ -345,6 +366,9 @@ The following table mentions the additional KYC data you must send about the cre
 |         |                                              |                                   |                                 |
 | MX      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| MY      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
 |         |                                              |                                   |                                 |
 | NA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
@@ -373,10 +397,16 @@ The following table mentions the additional KYC data you must send about the cre
 | PT      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| QA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | RO      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | RS      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
+|         |                                              |                                   |                                 |
+| RW      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
 |         |                                              |                                   |                                 |
 | SE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
@@ -397,16 +427,25 @@ The following table mentions the additional KYC data you must send about the cre
 | SV      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
 |         |                                              |                                   |                                 |
+| TH      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | TN      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
 |         |                                              |                                   |                                 |
 | TR      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| TT      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | TZ      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
 |         |                                              |                                   |                                 |
 | US      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
+|         |                                              |                                   |                                 |
+| VN      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
 |         |                                              |                                   |                                 |
 | ZA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
