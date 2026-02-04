@@ -1,0 +1,122 @@
+:root {
+  --primary-bg-color: #635bff;
+  --primary-text-color: #f5f5fd;
+
+  --secondry-bg-color: #7a73ff;
+  --secondry-text-color: #f5f5fd;
+
+  --url: url("/connector-pub/logo/ukhub-stripe-logo.png");
+
+.content-header {
+  background-color:var(--primary-bg-color);
+}
+
+.content-header h5 {
+  color: var(--primary-text-color);
+}
+
+.aside-body {
+  background-color: var(--secondry-bg-color);
+}
+
+.aside-body .nav-label, .mode_title {
+  color: var(--secondry-text-color);
+}
+
+.aside-body .nav-link span{
+  color: var(--secondry-text-color);
+}
+
+.aside-body .nav-link svg{
+  color: var(--secondry-text-color);
+}
+
+.aside-body .nav-link:before{
+  color: var(--secondry-text-color);
+  border-left: 2px solid var(--secondry-text-color) !important;
+}
+
+.nav-aside .with-sub.show:not(.active) svg {
+  color: var(--secondry-text-color);
+}
+
+.toc-title {
+  background-color:var(--primary-bg-color) !important;
+  color: var(--primary-text-color)  !important;
+}
+.toc-link {
+  color: var(--secondry-bg-color) !important;
+}
+.toc-link:hover, .toc-link:focus {
+  background-color:var(--primary-bg-color) !important;
+  color: var(--primary-text-color) !important;
+}
+
+.active-toc {
+  background-color: var(--secondry-bg-color) !important;
+  color: var(--secondry-text-color) !important;
+}
+.doc-navigation:hover, .doc-navigation:focus {
+  background-color: var(--primary-bg-color) !important;
+  color: var(--primary-text-color) !important;
+}
+.doc-navigation:hover a, .doc-navigation:focus a {
+  color: var(--primary-text-color) !important;
+}
+
+.brand-color {
+  color:var(--primary-bg-color) !important;
+}
+
+.brand-button {
+  background-color:var(--primary-bg-color) !important;
+  border-color:var(--primary-bg-color) !important;
+}
+
+.index-logo {
+  height: 100px;
+  width: 300px;
+  margin: 20px auto;
+  background: url(/connector-pub/logo/dev-ui-logo.png) center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.aside-loggedin-user h6{
+  color: var(--secondry-text-color) !important;
+}
+
+.aside-loggedin-user p{
+  color: var(--secondry-text-color) !important;
+}
+
+
+.navbar-right h6{
+  color: var(--primary-text-color) !important;
+}
+
+.navbar-right p{
+  color: var(--primary-text-color) !important;
+}
+
+
+.theme_changer {
+  display: none;
+}
+
+.documentation-links span{
+  color: var(--secondry-text-color) !important;
+}
+
+.nav-link {
+
+}
+.nav-link.nav-link--active{
+  background-color:var(--primary-bg-color) !important;
+  color:var(--primary-text-color) !important;
+}
+.documentation-sidebar {
+  visibility: hidden;
+  max-width: 0%;
+}
