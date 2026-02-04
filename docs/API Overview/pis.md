@@ -101,6 +101,8 @@ The following table mentions the bank account details you must send about the cr
 
 | Country | SchemeName   | Identification | RoutingNumber  | BranchNumber       | SwiftCode  |
 | ------- | ------------ | -------------- | -------------- | ------------------ | ---------- |
+| AE      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| AG      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | AL      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | AM      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | AT      | UK.OBIE.IBAN | IBAN           |                |                    |            |
@@ -108,6 +110,7 @@ The following table mentions the bank account details you must send about the cr
 | BA      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | BE      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | BG      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| BH      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | BJ      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | BN      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | BS      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
@@ -127,8 +130,10 @@ The following table mentions the bank account details you must send about the cr
 | FI      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | FR      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | GB      | UK.OBIE.SortCodeAccountNumber | SortCodeAccountNumber |       |                    |            |
+| GM      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | GR      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | GY      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
+| HK      | UK.OBIE.BBAN | Account Number | Bank Code      | Branch Code        |            |
 | HR      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | HU      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | ID      | UK.OBIE.BBAN | Account Number | Bank Code      |                    |            |
@@ -141,16 +146,19 @@ The following table mentions the bank account details you must send about the cr
 | JO      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | KE      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | KW      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| LC      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | LI      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | LK      | UK.OBIE.BBAN | Account Number | Bank Code      | Branch Code        |            |
 | LT      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | LU      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | LV      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | MA      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| MG      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | MN      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | MT      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | MU      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | MX      | UK.OBIE.BBAN | CLABE          |                |                    |            |
+| MY      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | NA      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | NL      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | NO      | UK.OBIE.IBAN | IBAN           |                |                    |            |
@@ -160,18 +168,23 @@ The following table mentions the bank account details you must send about the cr
 | PH      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | PL      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | PT      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| QA      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | RO      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | RS      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| RW      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | SE      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | SG      | UK.OBIE.BBAN | Account Number | Bank Code      | Branch Code        |            |
 | SI      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | SK      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | SN      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | SV      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| TH      | UK.OBIE.BBAN | Account Number | Bank Code      | Branch Code        |            |
 | TN      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | TR      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| TT      | UK.OBIE.BBAN | Account Number | Bank Code      | Branch Code        |            |
 | TZ      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | US      | UK.OBIE.BBAN | Account Number | Routing Number |                    |            |
+| VN      | UK.OBIE.BBAN | Account Number | Bank Code      |                    |            |
 | ZA      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 
 ### Additional required information KYC information for international payments
@@ -183,6 +196,12 @@ The following table mentions the additional KYC data you must send about the cre
 
 | Country | Required fields                              | Required if EntityType=individual | Required if EntityType=company  |
 | ------- | -------------------------------------------- | --------------------------------- | ------------------------------- |
+| AE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
+|         |                                              |                                   |                                 |
+| AG      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | AL      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
 |         |                                              |                                   |                                 |
@@ -202,6 +221,9 @@ The following table mentions the additional KYC data you must send about the cre
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | BG      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| BH      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | BJ      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
@@ -261,11 +283,17 @@ The following table mentions the additional KYC data you must send about the cre
 | GB      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| GM      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
+|         |                                              |                                   |                                 |
 | GR      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | GY      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
+|         |                                              |                                   |                                 |
+| HK      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | HR      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
@@ -303,6 +331,9 @@ The following table mentions the additional KYC data you must send about the cre
 | KW      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| LC      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | LI      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
@@ -318,8 +349,11 @@ The following table mentions the additional KYC data you must send about the cre
 | LV      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
-| MA     | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+| MA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| MG      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
 |         |                                              |                                   |                                 |
 | MN      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
@@ -332,6 +366,9 @@ The following table mentions the additional KYC data you must send about the cre
 |         |                                              |                                   |                                 |
 | MX      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
+| MY      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
 |         |                                              |                                   |                                 |
 | NA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
@@ -360,10 +397,16 @@ The following table mentions the additional KYC data you must send about the cre
 | PT      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| QA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | RO      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
 | RS      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
+|         |                                              |                                   |                                 |
+| RW      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
 |         |                                              |                                   |                                 |
 | SE      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
@@ -384,16 +427,25 @@ The following table mentions the additional KYC data you must send about the cre
 | SV      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
 |         |                                              |                                   |                                 |
+| TH      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | TN      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
 |         |                                              |                                   |                                 |
 | TR      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
 |         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
 |         |                                              |                                   |                                 |
+| TT      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
+|         | SupplementaryData.CreditorAccount.EntityType |                                   |                                 |
+|         |                                              |                                   |                                 |
 | TZ      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.AddressNonPOBox |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.AddressNonPOBox        |                                 |
 |         |                                              |                                   |                                 |
 | US      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
+|         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
+|         |                                              |                                   |                                 |
+| VN      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            | BusinessDetails.Address         |
 |         | SupplementaryData.CreditorAccount.EntityType | Individual.Address                |                                 |
 |         |                                              |                                   |                                 |
 | ZA      | SupplementaryData.CreditorAccount.Email      | Individual.DateOfBirth            |                                 |
