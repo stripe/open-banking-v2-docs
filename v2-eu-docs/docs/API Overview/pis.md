@@ -98,11 +98,14 @@ The following table mentions the bank account details you must send about the cr
 | Country | SchemeName   | Identification | RoutingNumber  | BranchNumber       | SwiftCode  |
 | ------- | ------------ | -------------- | -------------- | ------------------ | ---------- |
 | Eurozone| UK.OBIE.IBAN | IBAN           |                |                    |            |
+| AE      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| AG      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | AL      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | AM      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | AU      | UK.OBIE.BBAN | Account Number | BSB            |                    |            |
 | BA      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | BG      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| BH      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | BJ      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | BN      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | BS      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
@@ -115,7 +118,9 @@ The following table mentions the bank account details you must send about the cr
 | DZ      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | EC      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | ET      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
+| GM      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | GY      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
+| HK      | UK.OBIE.BBAN | Account Number | Bank Code      | Branch Code        |            |
 | HU      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | ID      | UK.OBIE.BBAN | Account Number | Bank Code      |                    |            |
 | IL      | UK.OBIE.IBAN | IBAN           |                |                    |            |
@@ -125,12 +130,15 @@ The following table mentions the bank account details you must send about the cr
 | JO      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | KE      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | KW      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| LC      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | LI      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | LK      | UK.OBIE.BBAN | Account Number | Bank Code      | Branch Code        |            |
 | MA      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| MG      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | MN      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | MU      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | MX      | UK.OBIE.BBAN | CLABE          |                |                    |            |
+| MY      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | NA      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | NO      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | NZ      | UK.OBIE.BBAN | Account Number |                |                    |            |
@@ -138,18 +146,23 @@ The following table mentions the bank account details you must send about the cr
 | PA      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | PH      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | PL      | UK.OBIE.IBAN | IBAN           |                |                    |            |
+| QA      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
 | RO      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | RS      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| RW      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | SE      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | SG      | UK.OBIE.BBAN | Account Number | Bank Code      | Branch Code        |            |
 | SI      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | SK      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | SN      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | SV      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| TH      | UK.OBIE.BBAN | Account Number | Bank Code      | Branch Code        |            |
 | TN      | UK.OBIE.IBAN | IBAN           |                |                    |            |
 | TR      | UK.OBIE.IBAN | IBAN           |                |                    | Swift Code |
+| TT      | UK.OBIE.BBAN | Account Number | Bank Code      | Branch Code        |            |
 | TZ      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 | US      | UK.OBIE.BBAN | Account Number | Routing Number |                    |            |
+| VN      | UK.OBIE.BBAN | Account Number | Bank Code      |                    |            |
 | ZA      | UK.OBIE.BBAN | Account Number |                |                    | Swift Code |
 
 ### Additional required information KYC information
