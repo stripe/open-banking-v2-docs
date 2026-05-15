@@ -22,7 +22,7 @@ The following apply to all domestic payment consents:
 -  Stripe suggest PISP notify the PSU that the same limits apply as in their Stripe app. It is possible from time to time that `domestic-payment-consents` is authorised, but the payment initiation fails due to account limits.
 
 ### `InstructedAmount/Currency`
-- `InstructedAmount/Currency` must be `EUR`
+- `InstructedAmount/Currency` must be one of the currencies you hold balances for.
 
 ### `RemittanceInformation/Reference`
 `RemittanceInformation/Reference` is a mandatory field and must adhere to the following:
